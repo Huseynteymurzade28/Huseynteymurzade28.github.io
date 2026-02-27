@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hüseyn Teymurzade - İletişim</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            line-height: 1.7;
+            color: #e0e0e0;
+            background-color: #0d1117;
+            min-height: 100vh;
+        }
+
+        /* --- NAVİGASYON --- */
+        nav {
+            background-color: #161b22;
+            border-bottom: 1px solid #30363d;
+            padding: 0 40px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            max-width: 960px;
+            margin: 0 auto;
+            gap: 8px;
+        }
+        nav ul li a {
+            display: block;
+            padding: 14px 18px;
+            color: #c9d1d9;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 500;
+            border-bottom: 2px solid transparent;
+            transition: color 0.2s, border-color 0.2s;
+        }
+        nav ul li a:hover { color: #58a6ff; }
+        nav ul li a.active {
+            color: #58a6ff;
+            border-bottom-color: #58a6ff;
+        }
+        nav ul li:first-child a {
+            font-weight: 700;
+            font-size: 16px;
+            color: #f0f6fc;
+            padding-left: 0;
+        }
+
+        /* --- ANA İÇERİK --- */
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 40px 20px 60px;
+        }
+
+        h1 {
+            color: #f0f6fc;
+            font-size: 2.2em;
+            margin-bottom: 8px;
+        }
+        .subtitle {
+            color: #8b949e;
+            font-size: 1.1em;
+            margin-bottom: 40px;
+        }
+
+        /* --- İLETİŞİM KARTLARI --- */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+        .contact-card {
+            background-color: #161b22;
+            border: 1px solid #30363d;
+            border-radius: 10px;
+            padding: 28px;
+            text-align: center;
+            transition: border-color 0.2s, transform 0.2s;
+        }
+        .contact-card:hover {
+            border-color: #58a6ff;
+            transform: translateY(-3px);
+        }
+        .contact-card .icon {
+            font-size: 2.2em;
+            margin-bottom: 14px;
+        }
+        .contact-card h3 {
+            color: #f0f6fc;
+            font-size: 1.1em;
+            margin-bottom: 8px;
+        }
+        .contact-card p {
+            color: #8b949e;
+            font-size: 0.92em;
+            margin-bottom: 14px;
+        }
+        .contact-card a.btn {
+            display: inline-block;
+            padding: 8px 20px;
+            background-color: #21262d;
+            color: #58a6ff;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 0.92em;
+            font-weight: 500;
+            border: 1px solid #30363d;
+            transition: background-color 0.2s, border-color 0.2s;
+        }
+        .contact-card a.btn:hover {
+            background-color: #30363d;
+            border-color: #58a6ff;
+        }
+
+        /* --- SOSYAL BAĞLANTILAR --- */
+        .social-section {
+            background-color: #161b22;
+            border: 1px solid #30363d;
+            border-radius: 10px;
+            padding: 32px;
+            text-align: center;
+        }
+        .social-section h2 {
+            color: #f0f6fc;
+            font-size: 1.35em;
+            margin-bottom: 20px;
+        }
+        .social-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 14px;
+        }
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 22px;
+            background-color: #21262d;
+            color: #c9d1d9;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 0.95em;
+            font-weight: 500;
+            border: 1px solid #30363d;
+            transition: border-color 0.2s, color 0.2s, transform 0.2s;
+        }
+        .social-links a:hover {
+            border-color: #58a6ff;
+            color: #58a6ff;
+            transform: translateY(-2px);
+        }
+
+        /* --- NOT --- */
+        .note {
+            margin-top: 36px;
+            padding: 20px 24px;
+            background-color: #161b22;
+            border: 1px solid #30363d;
+            border-left: 4px solid #58a6ff;
+            border-radius: 0 10px 10px 0;
+            color: #8b949e;
+            font-size: 0.95em;
+        }
+        .note strong { color: #c9d1d9; }
+
+        /* --- FOOTER --- */
+        footer {
+            text-align: center;
+            padding: 30px 20px;
+            color: #484f58;
+            font-size: 0.85em;
+            border-top: 1px solid #21262d;
+            margin-top: 60px;
+        }
+        footer a { color: #58a6ff; text-decoration: none; }
+        footer a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+
+    <!-- NAVİGASYON -->
+    <nav>
+        <ul>
+            <li><a href="index.html">HT</a></li>
+            <li><a href="index.html">Ana Sayfa</a></li>
+            <li><a href="about.html">Hakkımda</a></li>
+            <li><a href="interests.html">İlgi Alanlarım</a></li>
+            <li><a href="contact.html" class="active">İletişim</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+
+        <h1>📬 İletişim</h1>
+        <p class="subtitle">Benimle iletişime geçmek, iş birliği yapmak veya sadece merhaba demek için aşağıdaki kanalları kullanabilirsiniz.</p>
+
+        <!-- İLETİŞİM KARTLARI -->
+        <div class="contact-grid">
+
+            <div class="contact-card">
+                <div class="icon">📧</div>
+                <h3>E-posta</h3>
+                <p>Her türlü soru ve iş birliği teklifi için bana e-posta gönderebilirsiniz.</p>
+                <!-- BURAYA KENDİ E-POSTA ADRESİNİZİ YAZIN -->
+                <a class="btn" href="huseynteymurrr74@gmail.com">E-posta Gönder</a>
+            </div>
+
+            <div class="contact-card">
+                <div class="icon">💼</div>
+                <h3>LinkedIn</h3>
+                <p>Profesyonel ağım üzerinden bağlantı kurmak için.</p>
+                <!-- BURAYA KENDİ LINKEDIN LİNKİNİZİ YAZIN -->
+                <a class="btn" href="www.linkedin.com/in/huseyn-teymurzade" target="_blank">Profili Gör</a>
+            </div>
+
+            <div class="contact-card">
+                <div class="icon">🐙</div>
+                <h3>GitHub</h3>
+                <p>Projelerimi incelemek ve katkıda bulunmak için.</p>
+                <!-- BURAYA KENDİ GITHUB LİNKİNİZİ YAZIN -->
+                <a class="btn" href="https://github.com/Huseynteymurzade28" target="_blank">GitHub Profili</a>
+            </div>
+
+        </div>
+
+        <!-- SOSYAL BAĞLANTILAR -->
+        <div class="social-section">
+            <h2>🌐 Diğer Platformlar</h2>
+            <div class="social-links">
+                <!-- BURAYA KENDİ LİNKLERİNİZİ YAZIN -->
+                <a href="https://leetcode.com/u/Flearlyly/" target="_blank">🧩 LeetCode</a>
+                <a href="https://www.codewars.com/users/Huseyn%20Teymurzade" target="_blank">⚔️ Codewars</a>
+            </div>
+        </div>
+
+
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2026 Hüseyn Teymurzade &mdash;
+            <a href="https://github.com/Huseynteymurzade28" target="_blank">GitHub</a>
+        </p>
+    </footer>
+
+</body>
+</html>

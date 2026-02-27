@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hüseyn Teymurzade - İlgi Alanlarım</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            line-height: 1.7;
+            color: #e0e0e0;
+            background-color: #0d1117;
+            min-height: 100vh;
+        }
+
+        /* --- NAVİGASYON --- */
+        nav {
+            background-color: #161b22;
+            border-bottom: 1px solid #30363d;
+            padding: 0 40px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            max-width: 960px;
+            margin: 0 auto;
+            gap: 8px;
+        }
+        nav ul li a {
+            display: block;
+            padding: 14px 18px;
+            color: #c9d1d9;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 500;
+            border-bottom: 2px solid transparent;
+            transition: color 0.2s, border-color 0.2s;
+        }
+        nav ul li a:hover { color: #58a6ff; }
+        nav ul li a.active {
+            color: #58a6ff;
+            border-bottom-color: #58a6ff;
+        }
+        nav ul li:first-child a {
+            font-weight: 700;
+            font-size: 16px;
+            color: #f0f6fc;
+            padding-left: 0;
+        }
+
+        /* --- ANA İÇERİK --- */
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 40px 20px 60px;
+        }
+
+        h1 {
+            color: #f0f6fc;
+            font-size: 2.2em;
+            margin-bottom: 8px;
+        }
+        .subtitle {
+            color: #8b949e;
+            font-size: 1.1em;
+            margin-bottom: 40px;
+        }
+
+        /* --- BÖLÜMLER --- */
+        .section {
+            background-color: #161b22;
+            border: 1px solid #30363d;
+            border-radius: 10px;
+            padding: 28px 32px;
+            margin-bottom: 28px;
+        }
+        .section h2 {
+            color: #f0f6fc;
+            font-size: 1.35em;
+            margin-bottom: 18px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #21262d;
+        }
+
+        /* --- SIRASIZ LİSTE (ul) --- */
+        .section ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        .section ul li {
+            padding: 6px 0;
+            color: #c9d1d9;
+            font-size: 0.98em;
+        }
+        .section ul li::before {
+            content: "▸ ";
+            color: #58a6ff;
+            font-weight: bold;
+        }
+
+        /* --- SIRALI LİSTE (ol) --- */
+        .section ol {
+            padding-left: 22px;
+            color: #c9d1d9;
+        }
+        .section ol li {
+            padding: 6px 0;
+            font-size: 0.98em;
+        }
+        .section ol li::marker {
+            color: #58a6ff;
+            font-weight: bold;
+        }
+
+        /* --- TANIMLAMA LİSTESİ (dl) --- */
+        .section dl {
+            padding-left: 0;
+        }
+        .section dt {
+            color: #58a6ff;
+            font-weight: 700;
+            font-size: 1.02em;
+            margin-top: 16px;
+            margin-bottom: 4px;
+        }
+        .section dt:first-child { margin-top: 0; }
+        .section dd {
+            color: #8b949e;
+            padding-left: 18px;
+            margin-bottom: 4px;
+            font-size: 0.95em;
+        }
+
+        /* --- GRİD --- */
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 28px;
+        }
+        @media (max-width: 640px) {
+            .grid-2 { grid-template-columns: 1fr; }
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            text-align: center;
+            padding: 30px 20px;
+            color: #484f58;
+            font-size: 0.85em;
+            border-top: 1px solid #21262d;
+            margin-top: 60px;
+        }
+        footer a { color: #58a6ff; text-decoration: none; }
+        footer a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+
+    <!-- NAVİGASYON -->
+    <nav>
+        <ul>
+            <li><a href="index.html">HT</a></li>
+            <li><a href="index.html">Ana Sayfa</a></li>
+            <li><a href="about.html">Hakkımda</a></li>
+            <li><a href="interests.html" class="active">İlgi Alanlarım</a></li>
+            <li><a href="contact.html">İletişim</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+
+        <h1>💡 İlgi Alanlarım &amp; Hobiler</h1>
+        <p class="subtitle">Tutkuyla bağlı olduğum konular, merak ettiklerim ve boş zamanlarımda yaptıklarım.</p>
+
+        <!-- PROGRAMLAMA DİLLERİ -->
+        <div class="section">
+            <h2>💻 Programlama Dilleri &amp; Tercihlerim</h2>
+            <dl>
+                <dt>Rust</dt>
+                <dd>Bellek güvenliği ve performans için en sevdiğim dil. Sistem programlamada tercih ediyorum.</dd>
+
+                <dt>C / C++</dt>
+                <dd>Düşük seviye programlama, işletim sistemi kavramları ve performans-kritik uygulamalar için.</dd>
+
+                <dt>Python</dt>
+                <dd>Hızlı prototipleme, otomasyon scriptleri ve algoritma pratiği.</dd>
+
+                <dt>Go</dt>
+                <dd>Eşzamanlı (concurrent) programlama ve ağ uygulamaları geliştirme.</dd>
+
+                <dt>JavaScript / TypeScript</dt>
+                <dd>Web geliştirme, Electron uygulamaları ve fullstack projeler.</dd>
+
+                <dt>Lua</dt>
+                <dd>Oyun scriptleri, Neovim eklentileri ve gömülü dil olarak kullanım.</dd>
+            </dl>
+        </div>
+
+        <div class="grid-2">
+
+            <!-- TEKNOLOJİ İLGİ ALANLARI -->
+            <div class="section">
+                <h2>🔧 Teknoloji İlgi Alanlarım</h2>
+                <ul>
+                    <li>Sistem programlama &amp; düşük seviye optimizasyon</li>
+                    <li>Açık kaynak yazılım geliştirme</li>
+                    <li>Linux &amp; NixOS ekosistemi</li>
+                    <li>Konteynerizasyon (Docker)</li>
+                    <li>Algoritma tasarımı &amp; veri yapıları</li>
+                    <li>Yazılım mimarisi &amp; tasarım kalıpları</li>
+                    <li>Oyun geliştirme (Unity &amp; C#)</li>
+                    <li>Komut satırı araçları geliştirme</li>
+                </ul>
+            </div>
+
+            <!-- PROBLEM ÇÖZME -->
+            <div class="section">
+                <h2>🧩 Problem Çözme Platformları</h2>
+                <ol>
+                    <li>LeetCode &mdash; algoritmik problemler ve mülakat hazırlığı</li>
+                    <li>Codewars &mdash; çeşitli dillerde kata çözümleri</li>
+                    <li>Project Euler &mdash; matematik + programlama bulmacaları</li>
+                    <li>Advent of Code &mdash; yıllık kodlama meydan okumaları</li>
+                </ol>
+            </div>
+
+        </div>
+
+        <div class="grid-2">
+
+            <!-- HOBİLER -->
+            <div class="section">
+                <h2>🎮 Hobiler &amp; Boş Zaman</h2>
+                <ul>
+                    <li>Video oyunları oynamak &amp; oyun tasarımı keşfetmek</li>
+                    <li>Açık kaynak projelere katkıda bulunmak</li>
+                    <li>Yeni programlama dilleri denemek</li>
+                    <li>Linux dağıtımları kurcalamak (distro-hopping)</li>
+                    <li>Teknik blog yazıları &amp; dökümanlar okumak</li>
+                    <li>Dotfiles &amp; geliştirme ortamı özelleştirme</li>
+                </ul>
+            </div>
+
+            <!-- ÖĞRENMEK İSTEDİKLERİM -->
+            <div class="section">
+                <h2>📚 Şu An Öğrendiğim / Keşfettiğim</h2>
+                <ul>
+                    <li>İleri seviye algoritma &amp; veri yapıları</li>
+                    <li>Yazılım mimarisi &amp; sistem tasarımı</li>
+                    <li>İşletim sistemi geliştirme kavramları</li>
+                    <li>Derleyici (compiler) tasarımı</li>
+                    <li>Fonksiyonel programlama paradigması</li>
+                    <li>Bulut bilişim &amp; dağıtık sistemler</li>
+                </ul>
+            </div>
+
+        </div>
+
+        <!-- EN SEVDİĞİM ARAÇLAR -->
+        <div class="section">
+            <h2>🛠️ En Sevdiğim Araçlar</h2>
+            <dl>
+                <dt>Editör</dt>
+                <dd>VS Code &amp; Neovim</dd>
+
+                <dt>Terminal</dt>
+                <dd>Fish shell + Starship prompt</dd>
+
+                <dt>Versiyon Kontrol</dt>
+                <dd>Git &amp; GitHub</dd>
+
+                <dt>İşletim Sistemi</dt>
+                <dd>Linux (NixOS)</dd>
+
+                <dt>Konteyner</dt>
+                <dd>Docker &amp; Docker Compose</dd>
+
+                <dt>Paket Yöneticisi</dt>
+                <dd>Nix, Cargo, pip, npm</dd>
+            </dl>
+        </div>
+
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2026 Hüseyn Teymurzade &mdash;
+            <a href="https://github.com/flearlyly" target="_blank">GitHub</a>
+        </p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hüseyn Teymurzade - Hakkımda</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            line-height: 1.7;
+            color: #e0e0e0;
+            background-color: #0d1117;
+            min-height: 100vh;
+        }
+
+        /* --- NAVİGASYON --- */
+        nav {
+            background-color: #161b22;
+            border-bottom: 1px solid #30363d;
+            padding: 0 40px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            max-width: 960px;
+            margin: 0 auto;
+            gap: 8px;
+        }
+        nav ul li a {
+            display: block;
+            padding: 14px 18px;
+            color: #c9d1d9;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 500;
+            border-bottom: 2px solid transparent;
+            transition: color 0.2s, border-color 0.2s;
+        }
+        nav ul li a:hover { color: #58a6ff; }
+        nav ul li a.active {
+            color: #58a6ff;
+            border-bottom-color: #58a6ff;
+        }
+        nav ul li:first-child a {
+            font-weight: 700;
+            font-size: 16px;
+            color: #f0f6fc;
+            padding-left: 0;
+        }
+
+        /* --- ANA İÇERİK --- */
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 40px 20px 60px;
+        }
+
+        h1 {
+            color: #f0f6fc;
+            font-size: 2.2em;
+            margin-bottom: 8px;
+        }
+        h1 span { color: #58a6ff; }
+        .subtitle {
+            color: #8b949e;
+            font-size: 1.1em;
+            margin-bottom: 40px;
+        }
+
+        /* --- BİYOGRAFİ --- */
+        .bio {
+            background-color: #161b22;
+            border: 1px solid #30363d;
+            border-radius: 10px;
+            padding: 32px;
+            margin-bottom: 36px;
+        }
+        .bio p {
+            margin-bottom: 18px;
+            font-size: 1.02em;
+            color: #c9d1d9;
+        }
+        .bio p:last-child { margin-bottom: 0; }
+
+        /* --- ALINTI --- */
+        blockquote {
+            border-left: 4px solid #58a6ff;
+            background-color: #161b22;
+            border-radius: 0 10px 10px 0;
+            padding: 24px 28px;
+            margin: 36px 0;
+            font-style: italic;
+            color: #8b949e;
+            font-size: 1.05em;
+        }
+        blockquote footer {
+            margin-top: 12px;
+            font-style: normal;
+            font-size: 0.9em;
+            color: #58a6ff;
+            border: none;
+            padding: 0;
+            text-align: left;
+        }
+
+        /* --- ZAMAN ÇİZELGESİ --- */
+        .timeline-section h2 {
+            color: #f0f6fc;
+            font-size: 1.5em;
+            margin-bottom: 24px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #21262d;
+        }
+        .timeline {
+            position: relative;
+            padding-left: 30px;
+        }
+        .timeline::before {
+            content: "";
+            position: absolute;
+            left: 8px;
+            top: 4px;
+            bottom: 4px;
+            width: 2px;
+            background-color: #30363d;
+        }
+        .timeline-item {
+            position: relative;
+            margin-bottom: 30px;
+        }
+        .timeline-item::before {
+            content: "";
+            position: absolute;
+            left: -26px;
+            top: 6px;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: #58a6ff;
+            border: 2px solid #0d1117;
+        }
+        .timeline-item h3 {
+            color: #f0f6fc;
+            font-size: 1.1em;
+            margin-bottom: 4px;
+        }
+        .timeline-item .date {
+            color: #8b949e;
+            font-size: 0.88em;
+            margin-bottom: 8px;
+        }
+        .timeline-item p,
+        .timeline-item ul {
+            color: #c9d1d9;
+            font-size: 0.95em;
+        }
+        .timeline-item ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        .timeline-item ul li::before {
+            content: "▸ ";
+            color: #58a6ff;
+        }
+        .timeline-item ul li {
+            margin-bottom: 4px;
+        }
+
+        /* --- FOOTER --- */
+        footer.site-footer {
+            text-align: center;
+            padding: 30px 20px;
+            color: #484f58;
+            font-size: 0.85em;
+            border-top: 1px solid #21262d;
+            margin-top: 60px;
+        }
+        footer.site-footer a { color: #58a6ff; text-decoration: none; }
+        footer.site-footer a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+
+    <!-- NAVİGASYON -->
+    <nav>
+        <ul>
+            <li><a href="index.html">HT</a></li>
+            <li><a href="index.html">Ana Sayfa</a></li>
+            <li><a href="about.html" class="active">Hakkımda</a></li>
+            <li><a href="interests.html">İlgi Alanlarım</a></li>
+            <li><a href="contact.html">İletişim</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+
+        <h1>🎓 Hakkımda</h1>
+        <p class="subtitle">Kim olduğum, nereden geldiğim ve nereye gittiğim.</p>
+
+        <!-- BİYOGRAFİ -->
+        <section class="bio">
+            <p>
+                Merhaba! Ben <strong>Hüseyn Teymurzade</strong>.
+                <strong>Marmara Üniversitesi Bilgisayar Mühendisliği</strong> bölümünde öğrenciyim.
+                Yazılım dünyasına olan ilgim küçük yaşlarda başladı; bilgisayarların nasıl çalıştığını
+                anlamaya çalışırken kendimi <em>kod yazmayı öğrenirken</em> buldum. O günden beri
+                teknolojinin her dalına merak ve heyecanla yaklaşıyorum.
+            </p>
+            <p>
+                Şu anda <strong>C, C++, Rust, Python, Go, JavaScript</strong> ve <strong>TypeScript</strong>
+                gibi birçok programlama dilinde projeler geliştiriyorum. <em>Sistem programlama</em>,
+                <em>algoritma tasarımı</em> ve <em>açık kaynak katkıları</em> en çok vakit ayırdığım
+                konuların başında geliyor. Linux tabanlı sistemler, Docker ve NixOS gibi araçlarla da
+                günlük olarak çalışıyorum.
+            </p>
+            <p>
+                Hedefim yalnızca iyi bir mühendis olmak değil, aynı zamanda <strong>topluma fayda sağlayan
+                yazılımlar</strong> üretmek ve açık kaynak ekosistemine sürekli katkıda bulunmak.
+                Her yeni projeyi bir <em>öğrenme fırsatı</em> olarak görüyorum ve sürekli
+                kendimi geliştirmeyi ilke ediniyorum.
+            </p>
+        </section>
+
+        <!-- ALINTI -->
+        <blockquote>
+            "Bilgisayar bilimi, tıpkı astronomi gibi, teleskoplarla değil bilgisayarlarla değil;
+            <strong>düşünceyle</strong> ilgilidir."
+            <footer>&mdash; Edsger W. Dijkstra</footer>
+        </blockquote>
+
+        <!-- ZAMAN ÇİZELGESİ -->
+        <section class="timeline-section">
+            <h2>📅 Zaman Çizelgesi</h2>
+
+            <div class="timeline">
+
+                <div class="timeline-item">
+                    <h3>Marmara Üniversitesi &mdash; Bilgisayar Mühendisliği</h3>
+                    <div class="date">2024 &ndash; Devam ediyor</div>
+                    <ul>
+                        <li>Bilgisayar mühendisliği lisans eğitimi</li>
+                        <li>Algoritma ve veri yapıları, sistem programlama dersleri</li>
+                        <li>Açık kaynak topluluklarına aktif katılım</li>
+                    </ul>
+                </div>
+
+                <div class="timeline-item">
+                    <h3>Programlamaya İlk Adım</h3>
+                    <div class="date">2020 civarı</div>
+                    <ul>
+                        <li>İlk programlama dili olarak C ve Python öğrenimi</li>
+                        <li>Küçük otomasyon scriptleri ve konsol uygulamaları</li>
+                        <li>LeetCode ve Codewars ile problem çözme pratiği</li>
+                    </ul>
+                </div>
+
+                <div class="timeline-item">
+                    <h3>🎯 Kısa Vadeli Hedefler</h3>
+                    <div class="date">2026</div>
+                    <ul>
+                        <li>Sistem programlama ve düşük seviye optimizasyon becerilerini ilerletme</li>
+                        <li>Açık kaynak bir projeye anlamlı katkıda bulunma</li>
+                        <li>Staj veya iş birliği fırsatları yakalama</li>
+                    </ul>
+                </div>
+
+                <div class="timeline-item">
+                    <h3>🚀 Uzun Vadeli Hedefler</h3>
+                    <div class="date">Gelecek</div>
+                    <ul>
+                        <li>Yazılım mimarisi ve sistem tasarımı alanında uzmanlaşma</li>
+                        <li>Topluma fayda sağlayan özgün yazılım projeleri geliştirme</li>
+                        <li>Teknik topluluk oluşturma ve bilgi paylaşımı</li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <p>&copy; 2026 Hüseyn Teymurzade &mdash;
+            <a href="https://github.com/flearlyly" target="_blank">GitHub</a>
+        </p>
+    </footer>
+
+</body>
+</html>

@@ -592,18 +592,29 @@ blockquote footer {
 
 .contact-container {
     width: 90%;
-    max-width: 600px; /* İstenen: ~600px veya %50 */
-    margin: 40px auto; /* 1. Kural: margin auto ile ortalama */
-    padding: 30px;     /* 2. Kural: Geniş iç boşluk */
-    border: 1px solid #30363d; /* 3. Kural: Belirgin kenarlık */
-    border-radius: 12px;       /* 3. Kural: Köşe yuvarlaması */
-    background-color: #161b22; /* Tema uyumu */
+    max-width: 600px;
+    margin: 48px auto 0;
+    padding: 34px;
+    border: 1px solid #30363d;
+    border-radius: 14px;
+    background: linear-gradient(180deg, #161b22 0%, #11161d 100%);
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.22);
 }
 
 .contact-container h2 {
     text-align: center;
-    margin-bottom: 25px;
+    margin-bottom: 10px;
     color: #f0f6fc;
+}
+
+.contact-form-intro {
+    text-align: center;
+    color: #8b949e;
+    margin-bottom: 26px;
+}
+
+.contact-container form {
+    display: block;
 }
 
 .contact-container label {
@@ -613,41 +624,115 @@ blockquote footer {
     font-weight: 600;
 }
 
-/* 4. Kural: Tüm input, select, textarea elemanlarına müdahale */
-.contact-container input[type="text"],
-.contact-container input[type="email"],
+.contact-container input,
 .contact-container select,
 .contact-container textarea {
-    width: 100%;         /* 4. Kural: Genişlik %100 */
-    padding: 12px;       /* 4. Kural: Ferah iç boşluk */
-    margin-bottom: 20px; /* 4. Kural: Alt elemanla boşluk */
+    width: 100%;
+    padding: 12px 14px;
+    margin-bottom: 20px;
     background-color: #0d1117;
     border: 1px solid #30363d;
-    border-radius: 6px;
+    border-radius: 8px;
     color: #c9d1d9;
     font-size: 16px;
     font-family: inherit;
 }
 
+.contact-container input:focus,
+.contact-container select:focus,
+.contact-container textarea:focus {
+    outline: none;
+    border-color: #58a6ff;
+    box-shadow: 0 0 0 3px rgba(88, 166, 255, 0.15);
+}
+
+.contact-container input::placeholder,
+.contact-container textarea::placeholder {
+    color: #6e7681;
+}
+
 .contact-container textarea {
-    resize: vertical; /* Dikey yeniden boyutlandırma izin ver */
+    min-height: 150px;
+    resize: vertical;
 }
 
-/* 5. Kural: Gönder butonu özelleştirme */
-.contact-container input[type="submit"] {
-    width: 100%;
-    background-color: #238636; /* 5. Kural: Arka plan rengi */
-    color: white;
-    border: none;              /* 5. Kural: Kenarlığı kaldır */
-    padding: 14px 24px;        /* 5. Kural: Büyütülmüş padding */
-    font-size: 16px;
-    font-weight: bold;
-    border-radius: 6px;
+.option-box {
+    background-color: #1b2129;
+    border: 1px solid #30363d;
+    border-radius: 10px;
+    padding: 16px 18px;
+    margin-bottom: 20px;
+}
+
+.option-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
+    color: #c9d1d9;
+    font-weight: 400;
     cursor: pointer;
-    transition: background-color 0.2s;
-    margin-top: 10px;
 }
 
-.contact-container input[type="submit"]:hover {
+.option-item:last-child {
+    margin-bottom: 0;
+}
+
+.option-item input {
+    width: auto;
+    margin: 0;
+    accent-color: #58a6ff;
+}
+
+.contact-container input[type="file"] {
+    padding: 10px 12px;
+}
+
+.form-actions {
+    display: flex;
+    gap: 14px;
+    margin-top: 6px;
+}
+
+.form-actions button {
+    flex: 1;
+    border: none;
+    padding: 14px 24px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+}
+
+.form-actions button[type="submit"] {
+    background-color: #238636;
+    color: #ffffff;
+}
+
+.form-actions button[type="submit"]:hover {
     background-color: #2ea043;
+    transform: translateY(-1px);
+}
+
+.form-actions button[type="reset"] {
+    background-color: #21262d;
+    color: #c9d1d9;
+}
+
+.form-actions button[type="reset"]:hover {
+    background-color: #30363d;
+    color: #f0f6fc;
+    transform: translateY(-1px);
+}
+
+@media (max-width: 640px) {
+    .contact-container {
+        width: 100%;
+        padding: 24px 18px;
+    }
+
+    .form-actions {
+        flex-direction: column;
+    }
 }

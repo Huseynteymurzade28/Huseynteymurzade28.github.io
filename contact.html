@@ -94,25 +94,64 @@
 
         <!-- İLETİŞİM FORMU -->
         <div class="contact-container">
-            <h2>İletişim Formu</h2>
-            <form action="#" method="post">
+            <h2>Detaylı İletişim Formu</h2>
+            <p class="contact-form-intro">Projeler, iş birlikleri veya teknik sorularınız için aşağıdaki formu doldurabilirsiniz.</p>
+            <form action="#" method="post" enctype="multipart/form-data">
                 <label for="contact-name">Ad Soyad</label>
-                <input type="text" id="contact-name" name="name" placeholder="Adınız Soyadınız" required>
+                <input type="text" id="contact-name" name="name" placeholder="Örn: Asaf Karataş" required>
 
-                <label for="contact-email">E-posta</label>
-                <input type="email" id="contact-email" name="email" placeholder="ornek@email.com" required>
+                <label for="contact-email">E-posta Adresi</label>
+                <input type="email" id="contact-email" name="email" placeholder="ornek@mail.com" required>
+
+                <label for="contact-password">Başvuru Takip Şifresi</label>
+                <input type="password" id="contact-password" name="tracking-password" placeholder="Şifrenizi girin" required>
+
+                <label>İletişim Tercihi</label>
+                <div class="option-box">
+                    <label class="option-item" for="contact-pref-email">
+                        <input type="radio" id="contact-pref-email" name="contact-preference" value="email" checked>
+                        <span>Bana e-posta ile ulaşın</span>
+                    </label>
+                    <label class="option-item" for="contact-pref-phone">
+                        <input type="radio" id="contact-pref-phone" name="contact-preference" value="phone">
+                        <span>Bana telefonla ulaşın</span>
+                    </label>
+                </div>
+
+                <label>İlgi Alanları / Yetenekler</label>
+                <div class="option-box">
+                    <label class="option-item" for="skill-html">
+                        <input type="checkbox" id="skill-html" name="skills" value="html">
+                        <span>HTML</span>
+                    </label>
+                    <label class="option-item" for="skill-css">
+                        <input type="checkbox" id="skill-css" name="skills" value="css">
+                        <span>CSS</span>
+                    </label>
+                    <label class="option-item" for="skill-algorithm">
+                        <input type="checkbox" id="skill-algorithm" name="skills" value="algorithm">
+                        <span>Algoritma</span>
+                    </label>
+                </div>
 
                 <label for="contact-subject">Konu</label>
-                <select id="contact-subject" name="subject">
-                    <option value="job">İş Teklifi</option>
+                <select id="contact-subject" name="subject" required>
+                    <option value="">Lütfen bir konu seçin...</option>
+                    <option value="job-offer">İş Teklifi</option>
                     <option value="question">Soru</option>
                     <option value="feedback">Geri Bildirim</option>
                 </select>
 
-                <label for="contact-message">Mesaj</label>
-                <textarea id="contact-message" name="message" rows="5" placeholder="Mesajınız..." required></textarea>
+                <label for="contact-file">Özgeçmiş (CV) veya Fotoğraf Yükle</label>
+                <input type="file" id="contact-file" name="attachment" accept=".pdf,image/*">
 
-                <input type="submit" value="Gönder">
+                <label for="contact-message">Mesajınız</label>
+                <textarea id="contact-message" name="message" rows="6" placeholder="Detaylı mesajınızı buraya yazabilirsiniz..." required></textarea>
+
+                <div class="form-actions">
+                    <button type="submit">Gönder</button>
+                    <button type="reset">Temizle</button>
+                </div>
             </form>
         </div>
 

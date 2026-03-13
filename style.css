@@ -471,6 +471,85 @@ blockquote footer {
     background-color: #30363d;
     border-color: #58a6ff;
 }
+
+.quick-contact-section {
+    background-color: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 10px;
+    padding: 28px;
+    margin-bottom: 26px;
+    text-align: center;
+}
+
+.quick-contact-section h2 {
+    color: #f0f6fc;
+    margin-bottom: 16px;
+}
+
+.quick-contact-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+}
+
+.quick-contact-links a {
+    display: inline-block;
+    padding: 10px 18px;
+    background-color: #21262d;
+    color: #c9d1d9;
+    border: 1px solid #30363d;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.quick-contact-links a:hover {
+    color: #58a6ff;
+    border-color: #58a6ff;
+    background-color: #30363d;
+}
+
+.interest-summary {
+    background-color: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 10px;
+    padding: 28px;
+    margin-bottom: 26px;
+}
+
+.interest-summary h2 {
+    color: #f0f6fc;
+    margin-bottom: 14px;
+}
+
+.interest-summary ul {
+    padding-left: 22px;
+    margin-bottom: 16px;
+}
+
+.interest-summary li {
+    color: #c9d1d9;
+    margin-bottom: 8px;
+}
+
+.interest-summary .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #21262d;
+    color: #58a6ff;
+    border: 1px solid #30363d;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.2s, border-color 0.2s;
+}
+
+.interest-summary .btn:hover {
+    background-color: #30363d;
+    border-color: #58a6ff;
+}
+
 .social-section {
     background-color: #161b22;
     border: 1px solid #30363d;
@@ -507,4 +586,68 @@ blockquote footer {
     color: #58a6ff;
     border-color: #58a6ff;
     transform: translateY(-2px);
+}
+
+/* --- İLETİŞİM FORMU --- */
+
+.contact-container {
+    width: 90%;
+    max-width: 600px; /* İstenen: ~600px veya %50 */
+    margin: 40px auto; /* 1. Kural: margin auto ile ortalama */
+    padding: 30px;     /* 2. Kural: Geniş iç boşluk */
+    border: 1px solid #30363d; /* 3. Kural: Belirgin kenarlık */
+    border-radius: 12px;       /* 3. Kural: Köşe yuvarlaması */
+    background-color: #161b22; /* Tema uyumu */
+}
+
+.contact-container h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #f0f6fc;
+}
+
+.contact-container label {
+    display: block;
+    margin-bottom: 8px;
+    color: #c9d1d9;
+    font-weight: 600;
+}
+
+/* 4. Kural: Tüm input, select, textarea elemanlarına müdahale */
+.contact-container input[type="text"],
+.contact-container input[type="email"],
+.contact-container select,
+.contact-container textarea {
+    width: 100%;         /* 4. Kural: Genişlik %100 */
+    padding: 12px;       /* 4. Kural: Ferah iç boşluk */
+    margin-bottom: 20px; /* 4. Kural: Alt elemanla boşluk */
+    background-color: #0d1117;
+    border: 1px solid #30363d;
+    border-radius: 6px;
+    color: #c9d1d9;
+    font-size: 16px;
+    font-family: inherit;
+}
+
+.contact-container textarea {
+    resize: vertical; /* Dikey yeniden boyutlandırma izin ver */
+}
+
+/* 5. Kural: Gönder butonu özelleştirme */
+.contact-container input[type="submit"] {
+    width: 100%;
+    background-color: #238636; /* 5. Kural: Arka plan rengi */
+    color: white;
+    border: none;              /* 5. Kural: Kenarlığı kaldır */
+    padding: 14px 24px;        /* 5. Kural: Büyütülmüş padding */
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    margin-top: 10px;
+}
+
+.contact-container input[type="submit"]:hover {
+    background-color: #2ea043;
 }

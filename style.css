@@ -736,3 +736,283 @@ blockquote footer {
         flex-direction: column;
     }
 }
+
+/* --- FLEXBOX LAB SECTION --- */
+.flexbox-lab-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+    margin-top: 60px;
+}
+
+/* Flexbox Navbar */
+.flexbox-navbar {
+    display: flex;
+    flex-direction: row;
+    height: 10vh;
+    background-color: #e8e8e8;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+    border-bottom: 1px solid #ddd;
+}
+
+.flexbox-logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.flexbox-nav-links {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+}
+
+.flexbox-nav-links a {
+    color: #333;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+.flexbox-nav-links a:hover {
+    color: #5b7cfa;
+}
+
+/* Flexbox Hero Section */
+.flexbox-hero {
+    display: flex;
+    flex-direction: row;
+    height: 30vh;
+    background-color: #f8f8f8;
+    justify-content: space-between;
+    align-items: stretch;
+    padding: 2rem;
+    gap: 2rem;
+}
+
+.flexbox-hero-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1;
+}
+
+.flexbox-hero-content h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #333;
+    border: none;
+    padding: 0;
+}
+
+.flexbox-hero-content p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    color: #666;
+    text-align: left;
+}
+
+.flexbox-hero-image {
+    flex: 1;
+    background-color: #e8e8e8;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #aaa;
+    font-weight: bold;
+    font-size: 1rem;
+    position: relative;
+}
+
+.flexbox-hero-image::before {
+    content: "";
+    position: absolute;
+    width: 120px;
+    height: 80px;
+    background-color: #d0d0d0;
+    border-radius: 8px;
+    top: 50%;
+    left: 30%;
+    transform: translateY(-50%);
+}
+
+.flexbox-hero-image::after {
+    content: "";
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background-color: #d0d0d0;
+    border-radius: 50%;
+    top: 35%;
+    right: 20%;
+}
+
+/* Flexbox Cards Section */
+.flexbox-cards-section {
+    display: flex;
+    flex-direction: column;
+    height: 30vh;
+    background-color: #fff;
+    padding: 2rem;
+    overflow: hidden;
+}
+
+.flexbox-cards-section h2 {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    color: #333;
+    border: none;
+    padding: 0;
+}
+
+.flexbox-cards-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    align-items: flex-start;
+    flex: 1;
+}
+
+.flexbox-card {
+    display: flex;
+    flex-direction: column;
+    flex: 0 1 calc(25% - 1.125rem);
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.flexbox-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
+}
+
+.flexbox-card h3 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.flexbox-card p {
+    font-size: 0.85rem;
+    color: #666;
+    margin-bottom: 1rem;
+    text-align: left;
+    flex-grow: 1;
+}
+
+/* Flexbox Grow Section */
+.flexbox-grow-section {
+    display: flex;
+    flex-direction: column;
+    height: 20vh;
+    background-color: #f0f0f0;
+    padding: 2rem;
+}
+
+.flexbox-grow-section h2 {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    color: #333;
+    border: none;
+    padding: 0;
+}
+
+.flexbox-grow-container {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: stretch;
+    flex: 1;
+}
+
+.flexbox-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 0.95rem;
+    text-align: center;
+    padding: 1rem;
+}
+
+.flexbox-box div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.flexbox-small-text {
+    font-size: 0.75rem;
+    font-weight: normal;
+    color: inherit;
+}
+
+.flexbox-box-1 {
+    flex-grow: 1;
+    background-color: #c5e1f5;
+    color: #333;
+}
+
+.flexbox-box-2 {
+    flex-grow: 2;
+    background-color: #d4f1d4;
+    color: #333;
+}
+
+.flexbox-box-3 {
+    flex-grow: 1;
+    background-color: #f5e1c5;
+    color: #333;
+}
+
+/* Flexbox Footer */
+.flexbox-footer {
+    display: flex;
+    flex-direction: row;
+    height: 10vh;
+    background-color: #e8e8e8;
+    justify-content: center;
+    align-items: center;
+    color: #333;
+    font-size: 0.85rem;
+    border-top: 1px solid #ddd;
+}
+
+.flexbox-footer p {
+    margin: 0;
+}
+
+/* Flexbox Button Styling */
+.flexbox-btn {
+    background-color: #5b7cfa;
+    color: #fff;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+    align-self: flex-start;
+}
+
+.flexbox-btn:hover {
+    background-color: #4c63d2;
+}
+
+.flexbox-btn:active {
+    transform: scale(0.98);
+}

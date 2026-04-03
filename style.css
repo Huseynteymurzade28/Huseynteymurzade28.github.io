@@ -234,6 +234,16 @@ header.hero pre {
 
 .card a:hover { text-decoration: underline; }
 
+.card code {
+    font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+    font-size: 0.95em;
+    color: #7ee787;
+}
+
+.card-accent {
+    background: linear-gradient(135deg, rgba(88, 166, 255, 0.14), rgba(167, 139, 250, 0.12));
+}
+
 /* --- BADGE'LER --- */
 .badges {
     text-align: center;
@@ -260,6 +270,296 @@ footer {
 
 footer a { color: #58a6ff; text-decoration: none; }
 footer a:hover { text-decoration: underline; }
+
+/* --- POSITION LAB PAGE --- */
+.lab-position-body {
+    background: radial-gradient(circle at top, #1f2a44 0%, #0d1117 45%, #090c10 100%);
+    color: #f0f6fc;
+}
+
+.lab-position-page {
+    min-height: calc(100vh - 120px);
+    padding: 60px 20px 40px;
+}
+
+.lab-position-header {
+    max-width: 900px;
+    margin: 0 auto 32px;
+    text-align: center;
+}
+
+.lab-position-header h1 {
+    font-size: clamp(2rem, 4vw, 3.4rem);
+    margin-bottom: 14px;
+}
+
+.lab-position-header p {
+    max-width: 720px;
+    margin: 0 auto;
+    color: #c9d1d9;
+}
+
+.lab-position-kicker {
+    color: #8b949e;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    font-size: 0.82rem;
+}
+
+.lab-announcement-shell {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 24px 0 48px;
+}
+
+.lab-announcement-card {
+    position: relative;
+    overflow: hidden;
+    min-height: 520px;
+    border-radius: 32px;
+    padding: 110px 52px 56px;
+    background: linear-gradient(135deg, rgba(182, 219, 255, 0.92), rgba(213, 191, 255, 0.88));
+    box-shadow: 0 28px 60px rgba(0, 0, 0, 0.28);
+}
+
+.lab-announcement-card::before,
+.lab-announcement-card::after {
+    content: "";
+    position: absolute;
+    border-radius: 999px;
+    z-index: 1;
+}
+
+.lab-announcement-card::before {
+    width: 320px;
+    height: 320px;
+    right: -90px;
+    top: 120px;
+    background: rgba(255, 255, 255, 0.24);
+}
+
+.lab-announcement-card::after {
+    width: 220px;
+    height: 220px;
+    left: -70px;
+    bottom: -60px;
+    background: rgba(112, 178, 255, 0.18);
+}
+
+.lab-card-content {
+    position: relative;
+    z-index: 3;
+    max-width: 560px;
+}
+
+.lab-card-label {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 999px;
+    background: rgba(13, 17, 23, 0.08);
+    color: #243042;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.lab-card-label:hover {
+    transform: translateY(-2px);
+    background: rgba(13, 17, 23, 0.16);
+}
+
+.lab-announcement-card h2 {
+    font-size: clamp(2.4rem, 5vw, 4.2rem);
+    line-height: 1.05;
+    margin: 22px 0 20px;
+    color: #161b22;
+}
+
+.lab-card-text {
+    font-size: 1.08rem;
+    line-height: 1.9;
+    color: #243042;
+}
+
+.lab-badge {
+    position: absolute;
+    z-index: 4;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 48px;
+    padding: 12px 18px;
+    border-radius: 18px;
+    font-weight: 700;
+    color: #161b22;
+    cursor: pointer;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease;
+}
+
+.lab-badge:hover {
+    transform: scale(1.05) rotate(-1deg);
+    box-shadow: 0 14px 24px rgba(36, 48, 66, 0.14);
+}
+
+.lab-badge:active,
+.lab-action-button:active,
+.lab-action-link:active,
+.lab-fixed-home:active {
+    transform: translateY(1px);
+}
+
+.lab-badge-ticket {
+    top: 28px;
+    left: 26px;
+    background: #fff0b8;
+}
+
+.lab-badge-date {
+    top: 28px;
+    right: 26px;
+    background: #d9fbc4;
+}
+
+.lab-badge-location {
+    right: 72px;
+    bottom: 132px;
+    background: #ffffff;
+    z-index: 5;
+}
+
+.lab-badge-quota {
+    right: 26px;
+    bottom: 34px;
+    background: #ffe0d7;
+}
+
+.lab-card-glow {
+    position: absolute;
+    inset: 24px;
+    z-index: 2;
+    border-radius: 28px;
+    border: 1px solid rgba(255, 255, 255, 0.28);
+    pointer-events: none;
+}
+
+.lab-card-actions {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.lab-action-button,
+.lab-action-link,
+.lab-fixed-home {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+.lab-action-button {
+    padding: 14px 24px;
+    border-radius: 14px;
+    background: #161b22;
+    color: #f0f6fc;
+}
+
+.lab-action-link {
+    padding: 14px 24px;
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.48);
+    color: #161b22;
+}
+
+.lab-action-button:hover,
+.lab-action-link:hover,
+.lab-fixed-home:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 14px 22px rgba(0, 0, 0, 0.16);
+}
+
+.lab-fixed-home {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 20;
+    padding: 12px 18px;
+    border-radius: 14px;
+    background: #2f6feb;
+    color: #ffffff;
+}
+
+.lab-fixed-helper {
+    position: fixed;
+    right: 18px;
+    bottom: 18px;
+    z-index: 20;
+    max-width: 280px;
+    padding: 14px 18px;
+    border-radius: 18px;
+    background: linear-gradient(135deg, #6d28d9, #7c3aed);
+    color: #ffffff;
+    box-shadow: 0 16px 28px rgba(76, 29, 149, 0.35);
+    animation: lab-helper-float 3s ease-in-out infinite;
+}
+
+.lab-position-footer {
+    margin-top: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+@keyframes lab-helper-float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+@media (max-width: 768px) {
+    .lab-position-page {
+        padding-top: 96px;
+    }
+
+    .lab-announcement-card {
+        min-height: 640px;
+        padding: 120px 24px 140px;
+        border-radius: 24px;
+    }
+
+    .lab-announcement-card h2 {
+        font-size: 2.35rem;
+    }
+
+    .lab-badge-location {
+        right: 24px;
+        bottom: 100px;
+        max-width: calc(100% - 48px);
+    }
+
+    .lab-badge-quota {
+        right: 24px;
+        bottom: 28px;
+    }
+
+    .lab-fixed-home {
+        left: 12px;
+        top: 12px;
+    }
+
+    .lab-fixed-helper {
+        right: 12px;
+        bottom: 12px;
+        max-width: 220px;
+        font-size: 0.92rem;
+    }
+}
 
 /* --- ABOUT PAGE STYLES --- */
 .subtitle {

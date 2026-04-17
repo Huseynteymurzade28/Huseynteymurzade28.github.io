@@ -244,6 +244,120 @@ header.hero pre {
     background: linear-gradient(135deg, rgba(88, 166, 255, 0.14), rgba(167, 139, 250, 0.12));
 }
 
+/* --- HESAPLAMA SAYFASI --- */
+.calculator-page {
+    padding-top: 24px;
+}
+
+.calculator-hero {
+    padding-top: 30px;
+}
+
+.calculator-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 24px;
+}
+
+.calculator-card,
+.calculator-info {
+    background-color: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 12px;
+    padding: 28px;
+}
+
+.calculator-card h2,
+.calculator-info h2 {
+    color: #f0f6fc;
+    margin-bottom: 12px;
+}
+
+.calculator-card p,
+.calculator-info li {
+    color: #8b949e;
+}
+
+.calculator-form {
+    display: grid;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.calculator-form label {
+    color: #c9d1d9;
+    font-weight: 600;
+}
+
+.calculator-form input,
+.calculator-form select {
+    width: 100%;
+    padding: 12px 14px;
+    border-radius: 8px;
+    border: 1px solid #30363d;
+    background-color: #0d1117;
+    color: #f0f6fc;
+    font-size: 1rem;
+}
+
+.calculator-form input:focus,
+.calculator-form select:focus {
+    outline: none;
+    border-color: #58a6ff;
+    box-shadow: 0 0 0 3px rgba(88, 166, 255, 0.18);
+}
+
+.calculator-form .btn {
+    border: none;
+    border-radius: 8px;
+    padding: 12px 16px;
+    background: linear-gradient(135deg, #1f6feb, #58a6ff);
+    color: #f0f6fc;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.calculator-form .btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 10px 24px rgba(31, 111, 235, 0.22);
+}
+
+.result-box {
+    margin-top: 18px;
+    padding: 18px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, rgba(46, 160, 67, 0.14), rgba(88, 166, 255, 0.10));
+    border: 1px solid rgba(88, 166, 255, 0.25);
+}
+
+.result-box strong {
+    display: block;
+    color: #f0f6fc;
+    margin-bottom: 8px;
+}
+
+.result-box p {
+    margin-bottom: 4px;
+    color: #c9d1d9;
+}
+
+.calculator-info {
+    margin-top: 24px;
+}
+
+.calculator-info ul {
+    padding-left: 20px;
+}
+
+@media (max-width: 768px) {
+    .calculator-card,
+    .calculator-info {
+        padding: 22px;
+    }
+}
+
 /* --- BADGE'LER --- */
 .badges {
     text-align: center;

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hüseyn Teymurzade - Hesaplama Uygulamaları</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">HT</a></li>
+            <li><a href="index.html">Ana Sayfa</a></li>
+            <li><a href="about.html">Hakkımda</a></li>
+            <li><a href="interests.html">İlgi Alanlarım</a></li>
+            <li><a href="hesaplama.html" class="active">Hesaplama</a></li>
+            <li><a href="contact.html">İletişim</a></li>
+        </ul>
+    </nav>
+
+    <div class="container calculator-page">
+        <header class="hero calculator-hero">
+            <h1>🧮 Hesaplama Uygulamaları</h1>
+            <p>WebHW.pdf dosyasındaki iki uygulamayı portfolyo tasarımına uyumlu, ayrı bir sayfa olarak burada topladım.</p>
+        </header>
+
+        <section class="calculator-grid">
+            <article class="calculator-card">
+                <h2>Öğrenci Not Hesaplama</h2>
+                <p>Ad Soyad, vize ve final notunu girin. Ortalama %40 vize ve %60 final oranıyla hesaplanır; ardından harf notu ve geçti-kaldı durumu gösterilir.</p>
+
+                <form id="grade-form" class="calculator-form">
+                    <label for="student-name">Ad Soyad</label>
+                    <input type="text" id="student-name" placeholder="Örn: Hüseyn Teymurzade" required>
+
+                    <label for="midterm-grade">Vize Notu</label>
+                    <input type="text" id="midterm-grade" inputmode="decimal" placeholder="0 - 100" required>
+
+                    <label for="final-grade">Final Notu</label>
+                    <input type="text" id="final-grade" inputmode="decimal" placeholder="0 - 100" required>
+
+                    <button type="submit" class="btn">Hesapla</button>
+                </form>
+
+                <div id="grade-result" class="result-box" aria-live="polite">
+                    <strong>Sonucunuz burada görünecek.</strong>
+                </div>
+            </article>
+
+            <article class="calculator-card">
+                <h2>Birim Dönüştürücü</h2>
+                <p>Sıcaklık, uzunluk ve ağırlık birimleri arasında dönüşüm yapın. Farklı mühendislik hesapları için hızlı bir yardımcı alan olarak tasarlandı.</p>
+
+                <form id="converter-form" class="calculator-form">
+                    <label for="converter-value">Değer</label>
+                    <input type="text" id="converter-value" inputmode="decimal" placeholder="Örn: 50" required>
+
+                    <label for="converter-type">Dönüşüm Tipi</label>
+                    <select id="converter-type" required>
+                        <option value="c-to-f">Celsius -> Fahrenheit</option>
+                        <option value="f-to-c">Fahrenheit -> Celsius</option>
+                        <option value="c-to-k">Celsius -> Kelvin</option>
+                        <option value="m-to-km">Metre -> Kilometre</option>
+                        <option value="km-to-m">Kilometre -> Metre</option>
+                        <option value="km-to-mi">Kilometre -> Mil</option>
+                        <option value="kg-to-g">Kilogram -> Gram</option>
+                        <option value="g-to-kg">Gram -> Kilogram</option>
+                    </select>
+
+                    <button type="submit" class="btn">Dönüştür</button>
+                </form>
+
+                <div id="converter-result" class="result-box" aria-live="polite">
+                    <strong>Dönüşüm sonucu burada görünecek.</strong>
+                </div>
+            </article>
+        </section>
+
+        <section class="calculator-info">
+            <h2>Bu Sayfada Neler Var?</h2>
+            <ul>
+                <li>Ödevde istenen not hesaplama mantığı: ortalama, harf notu ve geçti/kaldı durumu</li>
+                <li>Ayrı bir bölüm olarak birim dönüştürücü uygulaması</li>
+                <li>Ana sayfadaki karttan veya üst menüden doğrudan erişim</li>
+            </ul>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Hüseyn Teymurzade &mdash;
+            <a href="https://github.com/flearlyly" target="_blank">GitHub</a>
+        </p>
+    </footer>
+
+    <script>
+        const gradeForm = document.getElementById("grade-form");
+        const converterForm = document.getElementById("converter-form");
+        const gradeResult = document.getElementById("grade-result");
+        const converterResult = document.getElementById("converter-result");
+
+        function parseScore(value) {
+            return Number.parseFloat(value.replace(",", "."));
+        }
+
+        function getLetterGrade(score) {
+            if (score >= 90) return "AA";
+            if (score >= 85) return "BA";
+            if (score >= 80) return "BB";
+            if (score >= 75) return "CB";
+            if (score >= 65) return "CC";
+            if (score >= 58) return "DC";
+            if (score >= 50) return "DD";
+            if (score >= 40) return "FD";
+            return "FF";
+        }
+
+        gradeForm.addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            const name = document.getElementById("student-name").value.trim();
+            const midterm = parseScore(document.getElementById("midterm-grade").value.trim());
+            const finalExam = parseScore(document.getElementById("final-grade").value.trim());
+
+            if (!name || Number.isNaN(midterm) || Number.isNaN(finalExam) || midterm < 0 || midterm > 100 || finalExam < 0 || finalExam > 100) {
+                gradeResult.innerHTML = "<strong>Geçerli bilgiler girin.</strong><p>Ad Soyad boş olmamalı, notlar ise 0 ile 100 arasında olmalıdır.</p>";
+                return;
+            }
+
+            const average = (midterm * 0.4) + (finalExam * 0.6);
+            const letter = getLetterGrade(average);
+            const status = average >= 50 ? "Geçti" : "Kaldı";
+
+            gradeResult.innerHTML = "<strong>" + name + "</strong>" +
+                "<p>Ortalama: " + average.toFixed(2) + "</p>" +
+                "<p>Harf Notu: " + letter + "</p>" +
+                "<p>Durum: " + status + "</p>";
+        });
+
+        converterForm.addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            const value = parseScore(document.getElementById("converter-value").value.trim());
+            const type = document.getElementById("converter-type").value;
+
+            if (Number.isNaN(value)) {
+                converterResult.innerHTML = "<strong>Geçerli bir sayı girin.</strong>";
+                return;
+            }
+
+            const conversions = {
+                "c-to-f": {
+                    label: "Fahrenheit",
+                    calculate: function (input) { return (input * 9 / 5) + 32; }
+                },
+                "f-to-c": {
+                    label: "Celsius",
+                    calculate: function (input) { return (input - 32) * 5 / 9; }
+                },
+                "c-to-k": {
+                    label: "Kelvin",
+                    calculate: function (input) { return input + 273.15; }
+                },
+                "m-to-km": {
+                    label: "Kilometre",
+                    calculate: function (input) { return input / 1000; }
+                },
+                "km-to-m": {
+                    label: "Metre",
+                    calculate: function (input) { return input * 1000; }
+                },
+                "km-to-mi": {
+                    label: "Mil",
+                    calculate: function (input) { return input * 0.621371; }
+                },
+                "kg-to-g": {
+                    label: "Gram",
+                    calculate: function (input) { return input * 1000; }
+                },
+                "g-to-kg": {
+                    label: "Kilogram",
+                    calculate: function (input) { return input / 1000; }
+                }
+            };
+
+            const selectedConversion = conversions[type];
+            const result = selectedConversion.calculate(value);
+
+            converterResult.innerHTML = "<strong>Sonuç: " + result.toFixed(3) + " " + selectedConversion.label + "</strong>";
+        });
+    </script>
+
+</body>
+</html>

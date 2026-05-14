@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hafta 1 - Kişisel Portfolyo | Hüseyn Teymurzade</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .portfolio-hero {
+            text-align: center;
+            padding: 60px 0 50px;
+            border-bottom: 1px solid #30363d;
+            margin-bottom: 36px;
+        }
+        .portfolio-avatar {
+            width: 110px;
+            height: 110px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #1f6feb, #58a6ff);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.8rem;
+            margin-bottom: 22px;
+            border: 3px solid #30363d;
+        }
+        .portfolio-hero h1 { font-size: 2.4em; color: #f0f6fc; }
+        .portfolio-hero h1 span { color: #58a6ff; }
+        .portfolio-hero .role {
+            font-size: 1.05em;
+            color: #8b949e;
+            margin: 8px 0 16px;
+        }
+        .portfolio-hero p { max-width: 560px; margin: 0 auto; }
+
+        .portfolio-section {
+            background-color: #161b22;
+            border: 1px solid #30363d;
+            border-radius: 12px;
+            padding: 28px 32px;
+            margin-bottom: 24px;
+        }
+        .portfolio-section h2 {
+            color: #f0f6fc;
+            font-size: 1.25em;
+            margin-bottom: 18px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #21262d;
+        }
+        .portfolio-section p {
+            color: #c9d1d9;
+            line-height: 1.8;
+            margin-bottom: 12px;
+            font-size: 1rem;
+            text-align: left;
+        }
+        .portfolio-section p:last-child { margin-bottom: 0; }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+            gap: 10px;
+        }
+        .skill-tag {
+            padding: 8px 12px;
+            background-color: rgba(88, 166, 255, 0.1);
+            border: 1px solid rgba(88, 166, 255, 0.22);
+            border-radius: 8px;
+            color: #79c0ff;
+            font-size: 0.88em;
+            text-align: center;
+            font-weight: 500;
+        }
+
+        .contact-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .contact-list li {
+            display: flex;
+            gap: 16px;
+            align-items: center;
+            padding: 12px 0;
+            border-bottom: 1px solid #21262d;
+            color: #c9d1d9;
+        }
+        .contact-list li:last-child { border-bottom: none; }
+        .contact-list .label {
+            color: #8b949e;
+            font-size: 0.88em;
+            min-width: 80px;
+            font-weight: 600;
+        }
+        .contact-list a { color: #58a6ff; text-decoration: none; }
+        .contact-list a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">HT</a></li>
+            <li><a href="index.html">Ana Sayfa</a></li>
+            <li><a href="about.html">Hakkımda</a></li>
+            <li><a href="interests.html">İlgi Alanlarım</a></li>
+            <li><a href="contact.html">İletişim</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+
+        <a class="back-link" href="index.html">← Ana Sayfa</a>
+
+        <!-- HERO -->
+        <div class="portfolio-hero">
+            <div class="portfolio-avatar">👤</div>
+            <h1>Merhaba, ben <span>Hüseyn</span>!</h1>
+            <p class="role">Bilgisayar Mühendisliği Öğrencisi &mdash; Marmara Üniversitesi</p>
+            <p>Yazılım geliştirme, sistem programlama ve açık kaynak dünyasına tutkuyla bağlıyım.</p>
+        </div>
+
+        <!-- BİYOGRAFİ -->
+        <section class="portfolio-section">
+            <h2>Hakkımda</h2>
+            <p>
+                Merhaba! Ben <strong>Hüseyn Teymurzade</strong>.
+                Marmara Üniversitesi Bilgisayar Mühendisliği bölümünde lisans eğitimime devam ediyorum.
+                Küçük yaşlardan beri teknolojiye ve yazılıma ilgi duyuyorum; kod yazmanın verdiği tatmini
+                başka hiçbir şeyde bulamıyorum.
+            </p>
+            <p>
+                Sistem programlama, algoritma tasarımı ve web geliştirme alanlarında kendimi geliştirmeye
+                devam ediyorum. Linux tabanlı sistemler, Docker ve açık kaynak araçlarıyla günlük olarak
+                çalışıyorum. Problem çözmeyi ve yeni teknolojileri keşfetmeyi çok severim.
+            </p>
+            <p>
+                Hedefim; topluma fayda sağlayan yazılımlar geliştirmek ve açık kaynak ekosistemine
+                sürekli katkıda bulunmak. Her yeni projeyi bir öğrenme fırsatı olarak görüyorum.
+            </p>
+        </section>
+
+        <!-- BECERİLER -->
+        <section class="portfolio-section">
+            <h2>Beceriler</h2>
+            <div class="skills-grid">
+                <div class="skill-tag">HTML5</div>
+                <div class="skill-tag">CSS3</div>
+                <div class="skill-tag">JavaScript</div>
+                <div class="skill-tag">Python</div>
+                <div class="skill-tag">C / C++</div>
+                <div class="skill-tag">Rust</div>
+                <div class="skill-tag">Go</div>
+                <div class="skill-tag">TypeScript</div>
+                <div class="skill-tag">Git</div>
+                <div class="skill-tag">Linux</div>
+                <div class="skill-tag">Docker</div>
+                <div class="skill-tag">NixOS</div>
+            </div>
+        </section>
+
+        <!-- EĞİTİM -->
+        <section class="portfolio-section">
+            <h2>Eğitim</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h3>Marmara Üniversitesi — Bilgisayar Mühendisliği</h3>
+                    <div class="date">2024 – Devam ediyor</div>
+                    <p>Bilgisayar mühendisliği lisans programı. Algoritma, veri yapıları ve sistem programlama dersleri.</p>
+                </div>
+                <div class="timeline-item">
+                    <h3>Lise Eğitimi</h3>
+                    <div class="date">2020 – 2024</div>
+                    <p>Sayısal bölüm mezunu. Programlamaya olan ilgim bu dönemde başladı; C ve Python öğrendim.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- İLETİŞİM -->
+        <section class="portfolio-section">
+            <h2>İletişim Bilgileri</h2>
+            <ul class="contact-list">
+                <li>
+                    <span class="label">E-posta</span>
+                    <a href="mailto:huseynteymurrr74@gmail.com">huseynteymurrr74@gmail.com</a>
+                </li>
+                <li>
+                    <span class="label">GitHub</span>
+                    <a href="https://github.com/flearlyly" target="_blank">github.com/flearlyly</a>
+                </li>
+                <li>
+                    <span class="label">Şehir</span>
+                    <span>İstanbul, Türkiye</span>
+                </li>
+                <li>
+                    <span class="label">Durum</span>
+                    <span>Aktif öğrenci &mdash; staj fırsatlarına açık</span>
+                </li>
+            </ul>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Hüseyn Teymurzade &mdash; Hafta 1 Laboratuvarı &mdash;
+            <a href="index.html">Ana Sayfa</a>
+        </p>
+    </footer>
+
+</body>
+</html>

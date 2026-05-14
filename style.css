@@ -183,19 +183,44 @@ header.hero p {
 }
 
 .week-chip {
-    padding: 8px 12px;
+    padding: 9px 20px;
     border-radius: 999px;
-    border: 1px solid #30363d;
-    background-color: rgba(13, 17, 23, 0.7);
-    color: #c9d1d9;
-    font-size: 0.92rem;
+    border: 1px solid rgba(48, 54, 61, 0.9);
+    background: rgba(22, 27, 34, 0.85);
+    color: #8b949e;
+    font-size: 0.84rem;
+    font-weight: 600;
+    letter-spacing: 0.025em;
+    text-decoration: none;
+    transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+    user-select: none;
 }
 
-.week-chip-active {
-    border-color: #58a6ff;
-    background-color: rgba(88, 166, 255, 0.16);
+a.week-chip:hover {
+    border-color: rgba(88, 166, 255, 0.7);
     color: #f0f6fc;
+    background: rgba(88, 166, 255, 0.13);
+    transform: translateY(-4px) scale(1.07);
+    box-shadow: 0 10px 24px rgba(88, 166, 255, 0.22);
+}
+
+.back-link {
+    display: inline-block;
+    margin-bottom: 24px;
+    color: #58a6ff;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.95em;
+}
+
+.back-link:hover { text-decoration: underline; }
+
+.week-chip-active {
+    border-color: rgba(88, 166, 255, 0.7);
+    background: linear-gradient(135deg, rgba(31, 111, 235, 0.38), rgba(88, 166, 255, 0.22));
+    color: #e6f0ff;
     font-weight: 700;
+    box-shadow: 0 4px 18px rgba(88, 166, 255, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.07);
 }
 
 header.hero pre {
@@ -294,14 +319,34 @@ header.hero pre {
 .card {
     background-color: #161b22;
     border: 1px solid #30363d;
-    border-radius: 10px;
+    border-radius: 12px;
     padding: 28px;
-    transition: border-color 0.2s, transform 0.2s;
+    transition: border-color 0.35s ease,
+                transform 0.45s cubic-bezier(0.34, 1.56, 0.64, 1),
+                box-shadow 0.35s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.card::after {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    border-radius: 12px 12px 0 0;
+    background: linear-gradient(90deg, #1f6feb, #58a6ff, #a78bfa);
+    opacity: 0;
+    transition: opacity 0.3s ease;
 }
 
 .card:hover {
-    border-color: #58a6ff;
-    transform: translateY(-3px);
+    border-color: rgba(88, 166, 255, 0.55);
+    transform: translateY(-10px) scale(1.025);
+    box-shadow: 0 28px 52px rgba(88, 166, 255, 0.14), 0 8px 20px rgba(0, 0, 0, 0.28);
+}
+
+.card:hover::after {
+    opacity: 1;
 }
 
 .card h3 {

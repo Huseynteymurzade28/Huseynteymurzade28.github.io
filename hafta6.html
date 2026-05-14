@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hafta 6 - JavaScript Hesaplama Uygulamaları</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">HT</a></li>
+            <li><a href="index.html">Ana Sayfa</a></li>
+            <li><a href="about.html">Hakkımda</a></li>
+            <li><a href="interests.html">İlgi Alanlarım</a></li>
+            <li><a href="contact.html">İletişim</a></li>
+        </ul>
+    </nav>
+
+    <div class="container calculator-page">
+
+        <a class="back-link" href="index.html">← Ana Sayfa</a>
+
+        <header class="hero calculator-hero" style="text-align:center; padding:40px 0 36px; border-bottom:1px solid #30363d; margin-bottom:36px;">
+            <h1 style="font-size:2.2em; color:#f0f6fc;">JavaScript Hesaplama Uygulamaları</h1>
+            <p style="font-size:1.05em; color:#8b949e; max-width:560px; margin:10px auto 0;">
+                Öğrenci not hesaplama ve Celsius↔Fahrenheit dönüştürücü — saf JavaScript ile.
+            </p>
+        </header>
+
+        <section class="calculator-grid">
+
+            <!-- HESAPLAMA 1: ÖĞRENCİ NOT HESAPLAMA -->
+            <article class="calculator-card">
+                <h2>Öğrenci Not Hesaplama</h2>
+                <p>
+                    Ad Soyad, vize ve final notunu girin. Ortalama %40 vize + %60 final oranıyla
+                    hesaplanır; harf notu ve geçti/kaldı durumu gösterilir.
+                </p>
+
+                <form id="not-form" class="calculator-form">
+                    <label for="ogrenci-adi">Ad Soyad</label>
+                    <input type="text" id="ogrenci-adi" placeholder="Örn: Hüseyn Teymurzade" required>
+
+                    <label for="vize-notu">Vize Notu (0–100)</label>
+                    <input type="text" id="vize-notu" inputmode="decimal" placeholder="Örn: 75" required>
+
+                    <label for="final-notu">Final Notu (0–100)</label>
+                    <input type="text" id="final-notu" inputmode="decimal" placeholder="Örn: 85" required>
+
+                    <button type="submit" class="btn">Hesapla</button>
+                </form>
+
+                <div id="not-sonuc" class="result-box" aria-live="polite">
+                    <strong>Sonuç burada görünecek.</strong>
+                </div>
+
+                <div class="calculator-info" style="margin-top:18px; padding:16px 18px; font-size:0.88em;">
+                    <p style="color:#8b949e; margin-bottom:8px; font-weight:600;">Harf Notu Skalası</p>
+                    <ul style="list-style:none; padding:0; column-count:2; column-gap:16px;">
+                        <li style="color:#c9d1d9; padding:3px 0;">AA ≥ 90</li>
+                        <li style="color:#c9d1d9; padding:3px 0;">BA ≥ 85</li>
+                        <li style="color:#c9d1d9; padding:3px 0;">BB ≥ 80</li>
+                        <li style="color:#c9d1d9; padding:3px 0;">CB ≥ 75</li>
+                        <li style="color:#c9d1d9; padding:3px 0;">CC ≥ 65</li>
+                        <li style="color:#c9d1d9; padding:3px 0;">DC ≥ 58</li>
+                        <li style="color:#c9d1d9; padding:3px 0;">DD ≥ 50</li>
+                        <li style="color:#c9d1d9; padding:3px 0;">FD ≥ 40</li>
+                        <li style="color:#c9d1d9; padding:3px 0;">FF &lt; 40</li>
+                    </ul>
+                </div>
+            </article>
+
+            <!-- HESAPLAMA 2: CELSIUS ↔ FAHRENHEIT -->
+            <article class="calculator-card">
+                <h2>Celsius ↔ Fahrenheit Dönüştürücü</h2>
+                <p>
+                    Bir sıcaklık değeri girin ve dönüşüm yönünü seçin. Sonuç anında hesaplanır.
+                </p>
+
+                <form id="sicaklik-form" class="calculator-form">
+                    <label for="sicaklik-deger">Sıcaklık Değeri</label>
+                    <input type="text" id="sicaklik-deger" inputmode="decimal" placeholder="Örn: 100" required>
+
+                    <label for="donusum-turu">Dönüşüm Türü</label>
+                    <select id="donusum-turu" required>
+                        <option value="c-to-f">Celsius → Fahrenheit</option>
+                        <option value="f-to-c">Fahrenheit → Celsius</option>
+                    </select>
+
+                    <button type="submit" class="btn">Dönüştür</button>
+                </form>
+
+                <div id="sicaklik-sonuc" class="result-box" aria-live="polite">
+                    <strong>Dönüşüm sonucu burada görünecek.</strong>
+                </div>
+
+                <div class="calculator-info" style="margin-top:18px; padding:16px 18px; font-size:0.88em;">
+                    <p style="color:#8b949e; margin-bottom:8px; font-weight:600;">Dönüşüm Formülleri</p>
+                    <ul style="list-style:none; padding:0;">
+                        <li style="color:#c9d1d9; padding:4px 0; font-family:ui-monospace,monospace;">°F = (°C × 9/5) + 32</li>
+                        <li style="color:#c9d1d9; padding:4px 0; font-family:ui-monospace,monospace;">°C = (°F − 32) × 5/9</li>
+                    </ul>
+                    <p style="color:#8b949e; margin-top:12px; margin-bottom:4px; font-weight:600;">Referans Noktaları</p>
+                    <ul style="list-style:none; padding:0;">
+                        <li style="color:#c9d1d9; padding:3px 0;">Suyun donma noktası: 0°C = 32°F</li>
+                        <li style="color:#c9d1d9; padding:3px 0;">İnsan vücut ısısı: 37°C = 98.6°F</li>
+                        <li style="color:#c9d1d9; padding:3px 0;">Suyun kaynama noktası: 100°C = 212°F</li>
+                    </ul>
+                </div>
+            </article>
+
+        </section>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Hüseyn Teymurzade &mdash; Hafta 6 JavaScript Hesaplama &mdash;
+            <a href="index.html">Ana Sayfa</a>
+        </p>
+    </footer>
+
+    <script>
+        function parseNum(str) {
+            return parseFloat(str.replace(",", "."));
+        }
+
+        function harfNotu(ort) {
+            if (ort >= 90) return "AA";
+            if (ort >= 85) return "BA";
+            if (ort >= 80) return "BB";
+            if (ort >= 75) return "CB";
+            if (ort >= 65) return "CC";
+            if (ort >= 58) return "DC";
+            if (ort >= 50) return "DD";
+            if (ort >= 40) return "FD";
+            return "FF";
+        }
+
+        /* --- Not Hesaplama --- */
+        document.getElementById("not-form").addEventListener("submit", function(e) {
+            e.preventDefault();
+            var ad = document.getElementById("ogrenci-adi").value.trim();
+            var vize = parseNum(document.getElementById("vize-notu").value.trim());
+            var final = parseNum(document.getElementById("final-notu").value.trim());
+            var kutu = document.getElementById("not-sonuc");
+
+            if (!ad || isNaN(vize) || isNaN(final) || vize < 0 || vize > 100 || final < 0 || final > 100) {
+                kutu.innerHTML = "<strong>Hata:</strong><p>Ad boş olmamalı; notlar 0–100 arasında olmalıdır.</p>";
+                return;
+            }
+
+            var ort = (vize * 0.4) + (final * 0.6);
+            var harf = harfNotu(ort);
+            var durum = ort >= 50 ? "Geçti" : "Kaldı";
+
+            kutu.innerHTML =
+                "<strong>" + ad + "</strong>" +
+                "<p>Vize: " + vize + " · Final: " + final + "</p>" +
+                "<p>Ortalama: <strong>" + ort.toFixed(2) + "</strong></p>" +
+                "<p>Harf Notu: <strong>" + harf + "</strong></p>" +
+                "<p>Durum: <strong>" + durum + "</strong></p>";
+        });
+
+        /* --- Celsius ↔ Fahrenheit --- */
+        document.getElementById("sicaklik-form").addEventListener("submit", function(e) {
+            e.preventDefault();
+            var deger = parseNum(document.getElementById("sicaklik-deger").value.trim());
+            var tur = document.getElementById("donusum-turu").value;
+            var kutu = document.getElementById("sicaklik-sonuc");
+
+            if (isNaN(deger)) {
+                kutu.innerHTML = "<strong>Hata:</strong><p>Geçerli bir sayı girin.</p>";
+                return;
+            }
+
+            var sonuc, aciklama;
+            if (tur === "c-to-f") {
+                sonuc = (deger * 9 / 5) + 32;
+                aciklama = deger + " °C = <strong>" + sonuc.toFixed(2) + " °F</strong>";
+            } else {
+                sonuc = (deger - 32) * 5 / 9;
+                aciklama = deger + " °F = <strong>" + sonuc.toFixed(2) + " °C</strong>";
+            }
+
+            kutu.innerHTML = "<strong>Sonuç</strong><p>" + aciklama + "</p>";
+        });
+    </script>
+
+</body>
+</html>

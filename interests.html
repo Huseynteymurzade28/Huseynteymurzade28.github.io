@@ -1,146 +1,187 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hüseyn Teymurzade - İlgi Alanlarım</title>
+    <title>Interests — Hüseyn Teymurzade</title>
+    <meta name="description" content="The languages and tools I use, the topics I'm learning, and what I do in my spare time.">
+    <meta name="theme-color" content="#16141f">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- NAVİGASYON -->
-    <nav>
-        <ul>
-            <li><a href="index.html">HT</a></li>
-            <li><a href="index.html">Ana Sayfa</a></li>
-            <li><a href="about.html">Hakkımda</a></li>
-            <li><a href="interests.html" class="active">İlgi Alanlarım</a></li>
-            <li><a href="hesaplama.html">Hesaplama</a></li>
-            <li><a href="contact.html">İletişim</a></li>
-        </ul>
-    </nav>
+    <a class="skip-link" href="#main">Skip to content</a>
 
-    <div class="container">
+    <!-- NAVIGATION -->
+    <header class="nav">
+        <div class="wrap nav-inner">
+            <a class="brand" href="index.html">
+                <span class="brand-mark" aria-hidden="true">HT</span>
+                <span class="brand-name">huseyn</span>
+            </a>
 
-        <h1>💡 İlgi Alanlarım &amp; Hobiler</h1>
-        <p class="subtitle">Tutkuyla bağlı olduğum konular, merak ettiklerim ve boş zamanlarımda yaptıklarım.</p>
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
 
-        <!-- PROGRAMLAMA DİLLERİ -->
-        <div class="section">
-            <h2>💻 Programlama Dilleri &amp; Tercihlerim</h2>
-            <dl>
-                <dt>Rust</dt>
-                <dd>Bellek güvenliği ve performans için en sevdiğim dil. Sistem programlamada tercih ediyorum.</dd>
-
-                <dt>C / C++</dt>
-                <dd>Düşük seviye programlama, işletim sistemi kavramları ve performans-kritik uygulamalar için.</dd>
-
-                <dt>Python</dt>
-                <dd>Hızlı prototipleme, otomasyon scriptleri ve algoritma pratiği.</dd>
-
-                <dt>Go</dt>
-                <dd>Eşzamanlı (concurrent) programlama ve ağ uygulamaları geliştirme.</dd>
-
-                <dt>JavaScript / TypeScript</dt>
-                <dd>Web geliştirme, Electron uygulamaları ve fullstack projeler.</dd>
-
-                <dt>Lua</dt>
-                <dd>Oyun scriptleri, Neovim eklentileri ve gömülü dil olarak kullanım.</dd>
-            </dl>
-        </div>
-
-        <div class="grid-2">
-
-            <!-- TEKNOLOJİ İLGİ ALANLARI -->
-            <div class="section">
-                <h2>🔧 Teknoloji İlgi Alanlarım</h2>
-                <ul>
-                    <li>Sistem programlama &amp; düşük seviye optimizasyon</li>
-                    <li>Açık kaynak yazılım geliştirme</li>
-                    <li>Linux &amp; NixOS ekosistemi</li>
-                    <li>Konteynerizasyon (Docker)</li>
-                    <li>Algoritma tasarımı &amp; veri yapıları</li>
-                    <li>Yazılım mimarisi &amp; tasarım kalıpları</li>
-                    <li>Oyun geliştirme (Unity &amp; C#)</li>
-                    <li>Komut satırı araçları geliştirme</li>
+            <div class="nav-menu" id="nav-menu">
+                <ul class="nav-links">
+                    <li><a href="index.html">home</a></li>
+                    <li><a href="projects.html">projects</a></li>
+                    <li><a href="about.html">about</a></li>
+                    <li><a href="interests.html" class="active">interests</a></li>
                 </ul>
+                <a class="nav-cta" href="contact.html">contact →</a>
             </div>
-
-            <!-- PROBLEM ÇÖZME -->
-            <div class="section">
-                <h2>🧩 Problem Çözme Platformları</h2>
-                <ol>
-                    <li>LeetCode &mdash; algoritmik problemler ve mülakat hazırlığı</li>
-                    <li>Codewars &mdash; çeşitli dillerde kata çözümleri</li>
-                    <li>Project Euler &mdash; matematik + programlama bulmacaları</li>
-                    <li>Advent of Code &mdash; yıllık kodlama meydan okumaları</li>
-                </ol>
-            </div>
-
         </div>
+    </header>
 
-        <div class="grid-2">
+    <main id="main">
 
-            <!-- HOBİLER -->
-            <div class="section">
-                <h2>🎮 Hobiler &amp; Boş Zaman</h2>
-                <ul>
-                    <li>Video oyunları oynamak &amp; oyun tasarımı keşfetmek</li>
-                    <li>Açık kaynak projelere katkıda bulunmak</li>
-                    <li>Yeni programlama dilleri denemek</li>
-                    <li>Linux dağıtımları kurcalamak (distro-hopping)</li>
-                    <li>Teknik blog yazıları &amp; dökümanlar okumak</li>
-                    <li>Dotfiles &amp; geliştirme ortamı özelleştirme</li>
-                </ul>
+        <!-- PAGE HEAD -->
+        <section class="page-head">
+            <div class="wrap">
+                <p class="eyebrow">interests</p>
+                <h1>What I'm curious about</h1>
+                <p class="lead">
+                    Why I reach for a given language, what runs in my daily environment,
+                    and which topics I'm chasing at the moment.
+                </p>
             </div>
+        </section>
 
-            <!-- ÖĞRENMEK İSTEDİKLERİM -->
-            <div class="section">
-                <h2>📚 Şu An Öğrendiğim / Keşfettiğim</h2>
-                <ul>
-                    <li>İleri seviye algoritma &amp; veri yapıları</li>
-                    <li>Yazılım mimarisi &amp; sistem tasarımı</li>
-                    <li>İşletim sistemi geliştirme kavramları</li>
-                    <li>Derleyici (compiler) tasarımı</li>
-                    <li>Fonksiyonel programlama paradigması</li>
-                    <li>Bulut bilişim &amp; dağıtık sistemler</li>
-                </ul>
+        <!-- LANGUAGES -->
+        <section class="section">
+            <div class="wrap">
+                <div class="section-head reveal">
+                    <p class="eyebrow">01 — languages</p>
+                    <h2>What I use, and what for</h2>
+                </div>
+
+                <dl class="deflist reveal">
+                    <div>
+                        <dt>Rust</dt>
+                        <dd>My main language. Memory safety without giving up performance — most of my terminal tools are written in it.</dd>
+                    </div>
+                    <div>
+                        <dt>Zig</dt>
+                        <dd>For simplicity and compile-time control. My go-to for interpreter and TUI experiments.</dd>
+                    </div>
+                    <div>
+                        <dt>C / C++</dt>
+                        <dd>Memory management, operating system concepts and embedded work — whenever I need the lowest layer.</dd>
+                    </div>
+                    <div>
+                        <dt>Go</dt>
+                        <dd>Concurrency and networked applications. When something needs to work quickly and ship easily.</dd>
+                    </div>
+                    <div>
+                        <dt>Odin</dt>
+                        <dd>Graphics and games. Together with Raylib, whenever I want to draw something to a screen.</dd>
+                    </div>
+                    <div>
+                        <dt>Python</dt>
+                        <dd>Rapid prototyping, automation, and data or machine learning work.</dd>
+                    </div>
+                    <div>
+                        <dt>TypeScript</dt>
+                        <dd>Web and desktop interfaces, including the front end I pair with Tauri.</dd>
+                    </div>
+                    <div>
+                        <dt>Lua</dt>
+                        <dd>Neovim configuration, game scripting and small games with LÖVE.</dd>
+                    </div>
+                </dl>
             </div>
+        </section>
 
-        </div>
+        <!-- ENVIRONMENT + TOPICS -->
+        <section class="section">
+            <div class="wrap">
+                <div class="two-col">
 
-        <!-- EN SEVDİĞİM ARAÇLAR -->
-        <div class="section">
-            <h2>🛠️ En Sevdiğim Araçlar</h2>
-            <dl>
-                <dt>Editör</dt>
-                <dd>VS Code &amp; Neovim</dd>
+                    <div class="panel reveal">
+                        <h3 class="panel-label">Daily environment</h3>
+                        <dl class="deflist">
+                            <div><dt>OS</dt><dd>Linux — NixOS</dd></div>
+                            <div><dt>Editor</dt><dd>Neovim, with VS Code alongside</dd></div>
+                            <div><dt>Shell</dt><dd>fish + starship</dd></div>
+                            <div><dt>Packages</dt><dd>Nix, Cargo, go mod, pip</dd></div>
+                            <div><dt>Version control</dt><dd>Git &amp; GitHub</dd></div>
+                            <div><dt>Containers</dt><dd>Docker &amp; Compose</dd></div>
+                        </dl>
+                    </div>
 
-                <dt>Terminal</dt>
-                <dd>Fish shell + Starship prompt</dd>
+                    <div class="panel reveal">
+                        <h3 class="panel-label">Topics I'm chasing</h3>
+                        <ul class="list-clean">
+                            <li>Systems programming and low-level optimisation</li>
+                            <li>Compiler and interpreter design</li>
+                            <li>Emulation and hardware simulation</li>
+                            <li>Operating system kernel concepts</li>
+                            <li>Distributed systems and concurrency models</li>
+                            <li>The functional programming paradigm</li>
+                            <li>Procedural generation and graphics programming</li>
+                            <li>Command-line interface design</li>
+                        </ul>
+                    </div>
 
-                <dt>Versiyon Kontrol</dt>
-                <dd>Git &amp; GitHub</dd>
+                </div>
+            </div>
+        </section>
 
-                <dt>İşletim Sistemi</dt>
-                <dd>Linux (NixOS)</dd>
+        <!-- PRACTICE -->
+        <section class="section">
+            <div class="wrap">
+                <div class="two-col">
 
-                <dt>Konteyner</dt>
-                <dd>Docker &amp; Docker Compose</dd>
+                    <div class="panel reveal">
+                        <h3 class="panel-label">Problem solving</h3>
+                        <ol class="list-num">
+                            <li><a href="https://leetcode.com/u/Flearlyly/" target="_blank" rel="noopener">LeetCode</a> — algorithmic problems and interview practice</li>
+                            <li><a href="https://www.codewars.com/users/Huseyn%20Teymurzade" target="_blank" rel="noopener">Codewars</a> — katas across different languages</li>
+                            <li>Project Euler — maths and programming puzzles</li>
+                            <li>Advent of Code — the yearly coding marathon</li>
+                        </ol>
+                    </div>
 
-                <dt>Paket Yöneticisi</dt>
-                <dd>Nix, Cargo, pip, npm</dd>
-            </dl>
-        </div>
+                    <div class="panel reveal">
+                        <h3 class="panel-label">Spare time</h3>
+                        <ul class="list-clean">
+                            <li>Playing games and picking apart their design</li>
+                            <li>Trying new languages — usually by writing a small tool</li>
+                            <li>Polishing dotfiles and my development environment</li>
+                            <li>Reading technical writing and source code</li>
+                            <li>Contributing to open-source projects</li>
+                        </ul>
+                    </div>
 
-    </div>
+                </div>
+
+                <p style="margin-top: 28px;" class="reveal">
+                    <a class="btn btn-ghost" href="contact.html">
+                        If you want to talk about any of this <span class="arrow" aria-hidden="true">→</span>
+                    </a>
+                </p>
+            </div>
+        </section>
+
+    </main>
 
     <!-- FOOTER -->
-    <footer>
-        <p>&copy; 2026 Hüseyn Teymurzade &mdash;
-            <a href="https://github.com/flearlyly" target="_blank">GitHub</a>
-        </p>
+    <footer class="footer">
+        <div class="wrap footer-inner">
+            <small>© 2026 Hüseyn Teymurzade — handwritten HTML &amp; CSS</small>
+            <ul class="footer-links">
+                <li><a href="https://github.com/Huseynteymurzade28" target="_blank" rel="noopener">GitHub</a></li>
+                <li><a href="https://www.linkedin.com/in/huseyn-teymurzade/" target="_blank" rel="noopener">LinkedIn</a></li>
+                <li><a href="https://leetcode.com/u/Flearlyly/" target="_blank" rel="noopener">LeetCode</a></li>
+                <li><a href="mailto:huseynteymurrr74@gmail.com">Email</a></li>
+            </ul>
+        </div>
     </footer>
 
+    <script src="main.js" defer></script>
 </body>
 </html>

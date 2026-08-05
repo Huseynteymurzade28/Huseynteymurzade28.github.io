@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects — Hüseyn Teymurzade</title>
+    <meta name="description" content="Terminal tools, emulators, interpreters and games written in Rust, Zig, Go, Odin and C.">
+    <meta name="theme-color" content="#16141f">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <!-- NAVIGATION -->
+    <header class="nav">
+        <div class="wrap nav-inner">
+            <a class="brand" href="index.html">
+                <span class="brand-mark" aria-hidden="true">HT</span>
+                <span class="brand-name">huseyn</span>
+            </a>
+
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+
+            <div class="nav-menu" id="nav-menu">
+                <ul class="nav-links">
+                    <li><a href="index.html">home</a></li>
+                    <li><a href="projects.html" class="active">projects</a></li>
+                    <li><a href="about.html">about</a></li>
+                    <li><a href="interests.html">interests</a></li>
+                </ul>
+                <a class="nav-cta" href="contact.html">contact →</a>
+            </div>
+        </div>
+    </header>
+
+    <main id="main">
+
+        <!-- PAGE HEAD -->
+        <section class="page-head">
+            <div class="wrap">
+                <p class="eyebrow">projects</p>
+                <h1>Things I've built</h1>
+                <p class="lead">
+                    Most of these came out of my own needs: work without leaving the terminal,
+                    stay fast, install in one command. Everything is open source — each title
+                    links straight to its repository.
+                </p>
+            </div>
+        </section>
+
+        <!-- TERMINAL TOOLS -->
+        <section class="section">
+            <div class="wrap">
+                <div class="section-head reveal">
+                    <p class="eyebrow">01 — terminal &amp; tui</p>
+                    <h2>Terminal tools</h2>
+                </div>
+
+                <div class="card-grid">
+
+                    <article class="project project-featured reveal">
+                        <span class="tag">featured</span>
+                        <div class="project-top">
+                            <h3><a href="https://github.com/Huseynteymurzade28/flerp" target="_blank" rel="noopener">flerp</a></h3>
+                            <span class="stars">23</span>
+                        </div>
+                        <p>
+                            A full-screen ratatui workspace for exploring and analysing local files
+                            without leaving the command line. Live search, file statistics, keyword
+                            extraction and repeated-line detection; it reads every page of a PDF and
+                            renders the embedded images as real pixels in terminals that support a
+                            graphics protocol.
+                        </p>
+                        <div class="project-foot">
+                            <span class="lang lang-rust">Rust</span>
+                            <a class="project-link" href="https://github.com/Huseynteymurzade28/flerp" target="_blank" rel="noopener">open repo <span class="arrow" aria-hidden="true">↗</span></a>
+                        </div>
+                    </article>
+
+                    <article class="project reveal">
+                        <div class="project-top">
+                            <h3><a href="https://github.com/Huseynteymurzade28/Yoinky" target="_blank" rel="noopener">Yoinky</a></h3>
+                            <span class="stars">8</span>
+                        </div>
+                        <p>
+                            A Linux system monitor. Continuously updating sparklines for CPU, memory and
+                            network, a per-core histogram and a tabbed workspace that pulls load, uptime,
+                            storage pressure and throughput onto one screen.
+                        </p>
+                        <div class="project-foot">
+                            <span class="lang lang-rust">Rust</span>
+                            <a class="project-link" href="https://github.com/Huseynteymurzade28/Yoinky" target="_blank" rel="noopener">open repo <span class="arrow" aria-hidden="true">↗</span></a>
+                        </div>
+                    </article>
+
+                    <article class="project reveal">
+                        <div class="project-top">
+                            <h3><a href="https://github.com/Huseynteymurzade28/meloic" target="_blank" rel="noopener">meloic</a></h3>
+                            <span class="stars">5</span>
+                        </div>
+                        <p>
+                            A terminal music player. Browse your collection, play and pause from the
+                            keyboard, all behind a lightweight and fast interface.
+                        </p>
+                        <div class="project-foot">
+                            <span class="lang lang-rust">Rust</span>
+                            <a class="project-link" href="https://github.com/Huseynteymurzade28/meloic" target="_blank" rel="noopener">open repo <span class="arrow" aria-hidden="true">↗</span></a>
+                        </div>
+                    </article>
+
+                    <article class="project reveal">
+                        <div class="project-top">
+                            <h3><a href="https://github.com/Huseynteymurzade28/Kizamu" target="_blank" rel="noopener">Kizamu</a></h3>
+                            <span class="stars">4</span>
+                        </div>
+                        <p>
+                            A terminal typing trainer written in Zig — 刻む, "to carve". It measures words
+                            per minute and accuracy, and keeps the practice inside the terminal.
+                        </p>
+                        <div class="project-foot">
+                            <span class="lang lang-zig">Zig</span>
+                            <a class="project-link" href="https://github.com/Huseynteymurzade28/Kizamu" target="_blank" rel="noopener">open repo <span class="arrow" aria-hidden="true">↗</span></a>
+                        </div>
+                    </article>
+
+                    <article class="project reveal">
+                        <div class="project-top">
+                            <h3><a href="https://github.com/Huseynteymurzade28/bytesizepet" target="_blank" rel="noopener">bytesizepet</a></h3>
+                            <span class="stars">4</span>
+                        </div>
+                        <p>
+                            A virtual pet living entirely in your TTY. Day/night sky, real-world weather
+                            data and drifting particles; the pet persists between runs and keeps ageing
+                            while you're away.
+                        </p>
+                        <div class="project-foot">
+                            <span class="lang lang-go">Go</span>
+                            <a class="project-link" href="https://github.com/Huseynteymurzade28/bytesizepet" target="_blank" rel="noopener">open repo <span class="arrow" aria-hidden="true">↗</span></a>
+                        </div>
+                    </article>
+
+                    <article class="project reveal">
+                        <div class="project-top">
+                            <h3><a href="https://github.com/Huseynteymurzade28/cosmocli" target="_blank" rel="noopener">cosmocli</a></h3>
+                            <span class="stars">3</span>
+                        </div>
+                        <p>
+                            A space explorer for the terminal: planets, stars, the ISS, rocket launches,
+                            the Moon, asteroids and every known exoplanet — all in a keyboard-driven interface.
+                        </p>
+                        <div class="project-foot">
+                            <span class="lang lang-rust">Rust</span>
+                            <a class="project-link" href="https://github.com/Huseynteymurzade28/cosmocli" target="_blank" rel="noopener">open repo <span class="arrow" aria-hidden="true">↗</span></a>
+                        </div>
+                    </article>
+
+                    <article class="project reveal">
+                        <div class="project-top">
+                            <h3><a href="https://github.com/Huseynteymurzade28/chokuto" target="_blank" rel="noopener">chokuto</a></h3>
+                            <span class="stars">3</span>
+                        </div>
+                        <p>
+                            A LAN chat and file-sharing tool that runs entirely in the terminal.
+                            No internet, no accounts, no config files — launch the server on one machine
+                            and connect from any other on the same network.
+                        </p>
+                        <div class="project-foot">
+                            <span class="lang lang-go">Go</span>
+                            <a class="project-link" href="https://github.com/Huseynteymurzade28/chokuto" target="_blank" rel="noopener">open repo <span class="arrow" aria-hidden="true">↗</span></a>
+                        </div>
+                    </article>
+
+                    <article class="project reveal">
+                        <div class="project-top">
+                            <h3><a href="https://github.com/Huseynteymurzade28/pokeductor" target="_blank" rel="noopener">pokeductor</a></h3>
+                            <span class="stars">4</span>
+                        </div>
+                        <p>
+                            A Pokédex that fetches PokeAPI data asynchronously, parses branching evolution
+                            trees and renders pixel-art sprites right in the terminal.
+                        </p>
+                        <div class="project-foot">
+                            <span class="lang lang-rust">Rust</span>
+                            <a class="project-link" href="https://github.com/Huseynteymurzade28/pokeductor" target="_blank" rel="noopener">open repo <span class="arrow" aria-hidden="true">↗</span></a>
+                        </div>
+                    </article>
+
+                    <article class="project reveal">
+                        <div class="project-top">
+                            <h3><a href="https://github.com/Huseynteymurzade28/digiductor" target="_blank" rel="noopener">digiductor</a></h3>
+                            <span class="stars">3</span>
+                        </div>
+                        <p>
+                            The Digimon side of the same idea: search and filter from the API, inspect
+                            detailed attributes, and visualise complex branched evolution trees in the terminal.
+                        </p>
+                        <div class="project-foot">
+                            <span class="lang lang-rust">Rust</span>
+                            <a class="project-link" href="https://github.com/Huseynteymurzade28/digiductor" target="_blank" rel="noopener">open repo <span class="arrow" aria-hidden="true">↗</span></a>
+                        </div>
+                    </article>
+
+                    <article class="project reveal">
+                        <div class="project-top">
+                            <h3><a href="https://github.com/Huseynteymurzade28/fasta-tui" target="_blank" rel="noopener">fasta-tui</a></h3>
+                            <span class="stars">2</span>
+                        </div>
+                        <p>
+                            A terminal viewer for FASTA sequences. It shows DNA, RNA and proteins through
+                            an interactive 3D Braille double helix, with real-time codon highlighting and
+                            GC content tracking.
+                        </p>
+                        <div class="project-foot">
+                            <span class="lang lang-rust">Rust</span>
+                            <a class="project-link" href="https://github.com/Huseynteymurzade28/fasta-tui" target="_blank" rel="noopener">open repo <span class="arrow" aria-hidden="true">↗</span></a>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- SYSTEMS & LOW LEVEL -->
+        <section class="section">
+            <div class="wrap">
+                <div class="section-head reveal">
+                    <p class="eyebrow">02 — systems &amp; low level</p>
+                    <h2>Where I wrote the plumbing myself</h2>
+                </div>
+
+                <div class="card-grid">
+
+                    <article class="project reveal">
+                        <div class="project-top">
+                            <h3><a href="https://github.com/Huseynteymurzade28/memflex" target="_blank" rel="noopener">memflex</a></h3>
+                            <span class="stars">6</span>
+                        </div>
+                        <p>
+                            A user-space dynamic memory manager built on <code>sbrk</code>:
+                            <code>my_malloc</code>, <code>my_free</code>, <code>my_calloc</code>.
+                            Includes first-fit, best-fit and worst-fit strategies, fragmentation handling
+                            and a comparative benchmark suite.
+                        </p>
+                        <div class="project-foot">
+                            <span class="lang lang-c">C</span>
+                            <a class="project-link" href="https://github.com/Huseynteymurzade28/memflex" target="_blank" rel="noopener">open repo <span class="arrow" aria-hidden="true">↗</span></a>
+                        </div>
+                    </article>
+
+                    <article class="project reveal">
+                        <div class="project-top">
+                            <h3><a href="https://github.com/Huseynteymurzade28/cbbox" target="_blank" rel="noopener">cbbox</a></h3>
+                            <span class="stars">5</span>
+                        </div>
+                        <p>
+                            A CHIP-8 interpreter that draws through SDL2. The core instruction set, timers
+                            and memory map are built from scratch — this was my way into emulator development.
+                        </p>
+                        <div class="project-foot">
+                            <span class="lang lang-rust">Rust</span>
+                            <a class="project-link" href="https://github.com/Huseynteymurzade28/cbbox" target="_blank" rel="noopener">open repo <span class="arrow" aria-hidden="true">↗</span></a>
+                        </div>
+                    </article>
+
+                    <article class="project reveal">
+                        <div class="project-top">
+                            <h3><a href="https://github.com/Huseynteymurzade28/liszig" target="_blank" rel="noopener">liszig</a></h3>
+                            <span class="stars">3</span>
+                        </div>
+                        <p>
+                            A minimal, modular Lisp interpreter written in Zig. Lexer, a parser that builds
+                            an AST from tagged unions, and an evaluator — with both a REPL and script execution.
+                        </p>
+                        <div class="project-foot">
+                            <span class="lang lang-zig">Zig</span>
+                            <a class="project-link" href="https://github.com/Huseynteymurzade28/liszig" target="_blank" rel="noopener">open repo <span class="arrow" aria-hidden="true">↗</span></a>
+                        </div>
+                    </article>
+
+                    <article class="project reveal">
+                        <div class="project-top">
+                            <h3><a href="https://github.com/Huseynteymurzade28/Diptych" target="_blank" rel="noopener">Diptych</a></h3>
+                            <span class="stars">3</span>
+                        </div>
+                        <p>
+                            A file manager built from scratch with Rust and GTK4. The name refers to a
+                            two-panelled artwork, which mirrors the dual-pane and inspector layout.
+                            Runs on Linux and compiles for Windows and macOS.
+                        </p>
+                        <div class="project-foot">
+                            <span class="lang lang-rust">Rust</span>
+                            <a class="project-link" href="https://github.com/Huseynteymurzade28/Diptych" target="_blank" rel="noopener">open repo <span class="arrow" aria-hidden="true">↗</span></a>
+                        </div>
+                    </article>
+
+                    <article class="project reveal">
+                        <div class="project-top">
+                            <h3><a href="https://github.com/Huseynteymurzade28/artbucket" target="_blank" rel="noopener">artbucket</a></h3>
+                            <span class="stars">2</span>
+                        </div>
+                        <p>
+                            A procedural terrain texture generator with a live-preview desktop GUI and a
+                            batch-friendly CLI. Perlin and Worley noise, fractal octave stacking, colour
+                            ramps, hillshading, normal-map baking and even the PNG encoder are all
+                            implemented by hand.
+                        </p>
+                        <div class="project-foot">
+                            <span class="lang lang-rust">Rust</span>
+                            <a class="project-link" href="https://github.com/Huseynteymurzade28/artbucket" target="_blank" rel="noopener">open repo <span class="arrow" aria-hidden="true">↗</span></a>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- GAMES & GRAPHICS -->
+        <section class="section">
+            <div class="wrap">
+                <div class="section-head reveal">
+                    <p class="eyebrow">03 — games &amp; graphics</p>
+                    <h2>Things that draw to a screen</h2>
+                </div>
+
+                <div class="card-grid">
+
+                    <article class="project reveal">
+                        <div class="project-top">
+                            <h3><a href="https://github.com/Huseynteymurzade28/EarthRescue" target="_blank" rel="noopener">EarthRescue</a></h3>
+                            <span class="stars">6</span>
+                        </div>
+                        <p>
+                            A retro space shooter made with LÖVE. Difficulty ramps up as you progress:
+                            enemies get smarter and start shooting back, and the asteroid field thickens.
+                        </p>
+                        <div class="project-foot">
+                            <span class="lang lang-lua">Lua</span>
+                            <a class="project-link" href="https://github.com/Huseynteymurzade28/EarthRescue" target="_blank" rel="noopener">open repo <span class="arrow" aria-hidden="true">↗</span></a>
+                        </div>
+                    </article>
+
+                    <article class="project reveal">
+                        <div class="project-top">
+                            <h3><a href="https://github.com/Huseynteymurzade28/klavrasa" target="_blank" rel="noopener">klavrasa</a></h3>
+                            <span class="stars">3</span>
+                        </div>
+                        <p>
+                            A MIDI piano-roll visualiser written in Odin with Raylib. It loads standard
+                            MIDI files, renders them as falling notes and plays audio in real time through
+                            sine-wave synthesis. The MIDI parser uses no external libraries.
+                        </p>
+                        <div class="project-foot">
+                            <span class="lang lang-odin">Odin</span>
+                            <a class="project-link" href="https://github.com/Huseynteymurzade28/klavrasa" target="_blank" rel="noopener">open repo <span class="arrow" aria-hidden="true">↗</span></a>
+                        </div>
+                    </article>
+
+                    <article class="project reveal">
+                        <div class="project-top">
+                            <h3><a href="https://github.com/Huseynteymurzade28/oddy" target="_blank" rel="noopener">oddy</a></h3>
+                            <span class="stars">2</span>
+                        </div>
+                        <p>
+                            A small 2D game built with Odin and Raylib. It started as a learning project
+                            and might grow with more demos later.
+                        </p>
+                        <div class="project-foot">
+                            <span class="lang lang-odin">Odin</span>
+                            <a class="project-link" href="https://github.com/Huseynteymurzade28/oddy" target="_blank" rel="noopener">open repo <span class="arrow" aria-hidden="true">↗</span></a>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- APPLICATIONS & DATA -->
+        <section class="section">
+            <div class="wrap">
+                <div class="section-head reveal">
+                    <p class="eyebrow">04 — applications &amp; data</p>
+                    <h2>Outside the terminal</h2>
+                </div>
+
+                <div class="card-grid">
+
+                    <article class="project reveal">
+                        <div class="project-top">
+                            <h3><a href="https://github.com/Huseynteymurzade28/caern" target="_blank" rel="noopener">caern</a></h3>
+                            <span class="stars">5</span>
+                        </div>
+                        <p>
+                            An AI-assisted change detection platform for satellite and drone imagery.
+                            It compares images from two points in time and highlights the regions that changed.
+                        </p>
+                        <div class="project-foot">
+                            <span class="lang lang-python">Python</span>
+                            <a class="project-link" href="https://github.com/Huseynteymurzade28/caern" target="_blank" rel="noopener">open repo <span class="arrow" aria-hidden="true">↗</span></a>
+                        </div>
+                    </article>
+
+                    <article class="project reveal">
+                        <div class="project-top">
+                            <h3><a href="https://github.com/Huseynteymurzade28/LightFollowingRobot" target="_blank" rel="noopener">LightFollowingRobot</a></h3>
+                            <span class="stars">6</span>
+                        </div>
+                        <p>
+                            An autonomous Arduino robot that uses LDR sensors to detect and follow the
+                            brightest light source. Built with PlatformIO.
+                        </p>
+                        <div class="project-foot">
+                            <span class="lang lang-cpp">C++</span>
+                            <a class="project-link" href="https://github.com/Huseynteymurzade28/LightFollowingRobot" target="_blank" rel="noopener">open repo <span class="arrow" aria-hidden="true">↗</span></a>
+                        </div>
+                    </article>
+
+                    <article class="project reveal">
+                        <div class="project-top">
+                            <h3><a href="https://github.com/Huseynteymurzade28/plant-disease-classification" target="_blank" rel="noopener">plant-disease-classification</a></h3>
+                            <span class="stars">3</span>
+                        </div>
+                        <p>
+                            Classifying plant diseases from leaf images — a project I built to practise
+                            image processing and model training.
+                        </p>
+                        <div class="project-foot">
+                            <span class="lang lang-python">Python</span>
+                            <a class="project-link" href="https://github.com/Huseynteymurzade28/plant-disease-classification" target="_blank" rel="noopener">open repo <span class="arrow" aria-hidden="true">↗</span></a>
+                        </div>
+                    </article>
+
+                    <article class="project reveal">
+                        <div class="project-top">
+                            <h3><a href="https://github.com/Huseynteymurzade28/signalume" target="_blank" rel="noopener">signalume</a></h3>
+                            <span class="stars">2</span>
+                        </div>
+                        <p>
+                            A directional signal finder: turn the phone slowly and an arrow points toward
+                            the strongest signal, so you can find the best spot to stand — or to place a
+                            router. The compass heading comes from the magnetometer and signal strength
+                            from real dBm readings on Android. SvelteKit + Tauri v2.
+                        </p>
+                        <div class="project-foot">
+                            <span class="lang lang-svelte">Svelte</span>
+                            <a class="project-link" href="https://github.com/Huseynteymurzade28/signalume" target="_blank" rel="noopener">open repo <span class="arrow" aria-hidden="true">↗</span></a>
+                        </div>
+                    </article>
+
+                </div>
+
+                <div class="panel reveal" style="margin-top: 26px;">
+                    <h3>Also</h3>
+                    <p style="color: var(--text-3); font-size: 0.94rem;">
+                        My system configurations are public too:
+                        <a href="https://github.com/Huseynteymurzade28/NixOs_Config" target="_blank" rel="noopener">NixOs_Config</a> and
+                        <a href="https://github.com/Huseynteymurzade28/tucuxi" target="_blank" rel="noopener">tucuxi</a>.
+                        Everything else lives on
+                        <a href="https://github.com/Huseynteymurzade28?tab=repositories" target="_blank" rel="noopener">my GitHub profile</a>.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="wrap footer-inner">
+            <small>© 2026 Hüseyn Teymurzade — handwritten HTML &amp; CSS</small>
+            <ul class="footer-links">
+                <li><a href="https://github.com/Huseynteymurzade28" target="_blank" rel="noopener">GitHub</a></li>
+                <li><a href="https://www.linkedin.com/in/huseyn-teymurzade/" target="_blank" rel="noopener">LinkedIn</a></li>
+                <li><a href="https://leetcode.com/u/Flearlyly/" target="_blank" rel="noopener">LeetCode</a></li>
+                <li><a href="mailto:huseynteymurrr74@gmail.com">Email</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="main.js" defer></script>
+</body>
+</html>

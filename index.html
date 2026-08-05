@@ -1,259 +1,347 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hüseyn Teymurzade - Ana Sayfa</title>
+    <title>Hüseyn Teymurzade — Systems &amp; terminal tooling</title>
+    <meta name="description" content="Hüseyn Teymurzade — computer engineering student at Marmara University. I write systems software and terminal tooling in Rust, Zig, Go and C.">
+    <meta name="author" content="Hüseyn Teymurzade">
+    <meta name="theme-color" content="#16141f">
+    <meta property="og:title" content="Hüseyn Teymurzade">
+    <meta property="og:description" content="Systems programming and terminal tooling. Rust · Zig · Go · Odin · C.">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- NAVİGASYON -->
-    <nav>
-        <ul>
-            <li><a href="index.html">HT</a></li>
-            <li><a href="index.html" class="active">Ana Sayfa</a></li>
-            <li><a href="about.html">Hakkımda</a></li>
-            <li><a href="interests.html">İlgi Alanlarım</a></li>
-            <li><a href="hesaplama.html">Hesaplama</a></li>
-            <li><a href="contact.html">İletişim</a></li>
-        </ul>
-    </nav>
+    <a class="skip-link" href="#main">Skip to content</a>
 
-    <div class="container">
+    <!-- NAVIGATION -->
+    <header class="nav">
+        <div class="wrap nav-inner">
+            <a class="brand" href="index.html">
+                <span class="brand-mark" aria-hidden="true">HT</span>
+                <span class="brand-name">huseyn</span>
+            </a>
 
-        <!-- HEADER (Hero Bölümü) -->
-        <header class="hero">
-            <pre><code>██╗  ██╗██╗   ██╗███████╗███████╗██╗   ██╗███╗   ██╗
-██║  ██║██║   ██║██╔════╝██╔════╝╚██╗ ██╔╝████╗  ██║
-███████║██║   ██║███████╗█████╗   ╚████╔╝ ██╔██╗ ██║
-██╔══██║██║   ██║╚════██║██╔══╝    ╚██╔╝  ██║╚██╗██║
-██║  ██║╚██████╔╝███████║███████╗   ██║   ██║ ╚████║
-╚═╝  ╚═╝ ╚═════╝ ╚══════╝╚══════╝   ╚═╝   ╚═╝  ╚═══╝</code></pre>
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
 
-            <h1>Merhaba, ben <span>Hüseyn</span>!</h1>
-            <p>Marmara Üniversitesi Bilgisayar Mühendisliği öğrencisiyim. Yazılım geliştirme, problem çözme ve açık kaynak dünyasına tutkuyla bağlıyım.</p>
-
-            <section class="featured-week" aria-label="One cikan laboratuvar">
-                <p class="featured-week-label">En Yeni Laboratuvar</p>
-                <h2>Hafta 7 Bootstrap + JavaScript Uygulamasi</h2>
-                <p>Etkinlik kayit formu, tema degistirme, Bootstrap navbar, grid, card ve dinamik sonuc alani ile hazirlanan responsive calismayi ilk olarak buradan acabilirsiniz.</p>
-                <div class="featured-week-actions">
-                    <a class="featured-week-link" href="hafta7.html">Laboratuvarı Aç &rarr;</a>
-                    <span class="featured-week-muted">Diğer haftalar aşağıdaki menüden açılabilir.</span>
-                </div>
-                <div class="week-preview-row">
-                    <a class="week-chip week-chip-active" href="hafta7.html">Hafta 7</a>
-                    <a class="week-chip" href="hafta6.html">Hafta 6</a>
-                    <a class="week-chip" href="hafta5.html">Hafta 5</a>
-                    <a class="week-chip" href="hafta4.html">Hafta 4</a>
-                    <a class="week-chip" href="hafta3.html">Hafta 3</a>
-                    <a class="week-chip" href="hafta2.html">Hafta 2</a>
-                    <a class="week-chip" href="hafta1.html">Hafta 1</a>
-                </div>
-            </section>
-        </header>
-
-        <!-- İKİ SÜTUNLU DÜZEN (Ödev Gereksinimi) -->
-        <div class="content-wrapper">
-            
-            <!-- SOL SÜTUN: Ana İçerik -->
-            <main class="main-content">
-                <h2>Öne Çıkanlar</h2>
-                <p>Bu bölümde projelerim ve ilgi alanlarım hakkında özet bilgiler bulabilirsiniz. Daha fazlası için menüyü kullanabilirsiniz.</p>
-                <p>Aşağıda yer alan kartlar aracılığıyla detaylı sayfalara geçiş yapabilirsiniz.</p>
-
-                <!-- KARTLAR -->
-                <section class="cards">
-                    <div class="card card-accent card-featured">
-                        <h3>🚀 Web Lab Hafta 7</h3>
-                        <p>Bootstrap ve JavaScript ile hazirladigim etkinlik kayit sayfasina giderek tema degistirme, form dogrulama ve basvuru ozeti ozelliklerini deneyin.</p>
-                        <a href="hafta7.html">İncele &rarr;</a>
-                    </div>
-                    <div class="card">
-                        <h3>🎓 Hakkımda</h3>
-                        <p>Biyografim, eğitim geçmişim ve hedeflerim hakkında daha fazla bilgi edinmek için bu sayfayı ziyaret edin.</p>
-                        <a href="about.html">Devamını oku &rarr;</a>
-                    </div>
-                    <div class="card">
-                        <h3>💡 İlgi Alanlarım</h3>
-                        <p>Yazılım dilleri, araçlar, hobiler ve merak ettiğim konular hakkında detaylı bilgi.</p>
-                        <a href="interests.html">Keşfet &rarr;</a>
-                    </div>
-                    <div class="card">
-                        <h3>📬 İletişim</h3>
-                        <p>Benimle iletişime geçmek, iş birliği yapmak veya soru sormak için iletişim sayfasına göz atın.</p>
-                        <a href="contact.html">İletişime geç &rarr;</a>
-                    </div>
-                    <div class="card card-accent">
-                        <h3>📍 Web Lab Hafta 5</h3>
-                        <p>CSS <code>position</code> konusunu tek bir duyuru kartı üzerinde uyguladığım etkileşimli laboratuvar çalışmasını görüntüleyin.</p>
-                        <a href="lab-position.html">Lab sayfasını aç &rarr;</a>
-                    </div>
-                    <div class="card card-accent">
-                        <h3>🧮 Web Ödevi Hesaplama Sayfası</h3>
-                        <p>Ödevde istenen not hesaplama ve birim dönüştürücü uygulamalarını ayrı bir sayfada etkileşimli olarak deneyin.</p>
-                        <a href="hesaplama.html">Hesaplama sayfasını aç &rarr;</a>
-                    </div>
-                </section>
-
-                <!-- TEKNOLOJİ BADGE'LERİ -->
-                <section class="badges">
-                    <h2>⚡ Teknoloji Yığınım</h2>
-                    <img src="https://img.shields.io/badge/C-00599C?style=for-the-badge&logo=c&logoColor=white" alt="C">
-                    <img src="https://img.shields.io/badge/C%2B%2B-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white" alt="C++">
-                    <img src="https://img.shields.io/badge/C%23-239120?style=for-the-badge&logo=c-sharp&logoColor=white" alt="C#">
-                    <img src="https://img.shields.io/badge/Rust-000000?style=for-the-badge&logo=rust&logoColor=white" alt="Rust">
-                    <img src="https://img.shields.io/badge/Python-FFD43B?style=for-the-badge&logo=python&logoColor=blue" alt="Python">
-                    <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript">
-                    <img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript">
-                    <img src="https://img.shields.io/badge/Go-00ADD8?style=for-the-badge&logo=go&logoColor=white" alt="Go">
-                    <img src="https://img.shields.io/badge/Lua-2C2D72?style=for-the-badge&logo=lua&logoColor=white" alt="Lua">
-                    <br><br>
-                    <img src="https://img.shields.io/badge/GIT-E44C30?style=for-the-badge&logo=git&logoColor=white" alt="Git">
-                    <img src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black" alt="Linux">
-                    <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="Docker">
-                    <img src="https://img.shields.io/badge/Nix-5277C3?style=for-the-badge&logo=nixos&logoColor=white" alt="Nix">
-                    <img src="https://img.shields.io/badge/Unity-100000?style=for-the-badge&logo=unity&logoColor=white" alt="Unity">
-                    <img src="https://img.shields.io/badge/Electron-2B2E3A?style=for-the-badge&logo=electron&logoColor=9FEAF9" alt="Electron">
-                </section>
-            </main>
-            
-            <!-- SAĞ SÜTUN: Yan Bilgi (Ödev Gereksinimi) -->
-            <aside class="sidebar">
-                <h2>Hızlı Bilgiler</h2>
-                <p>
-                    Yan menüde kısa bilgiler ve duyurular yer almaktadır.
-                    Şu an Marmara Üniversitesi'nde eğitimime devam ediyorum.
-                </p>
-                <p>
-                    Açık kaynak projelere katkıda bulunmayı seviyorum.
-                    GitHub profilimi takip ederek son çalışmalarımdan haberdar olabilirsiniz.
-                </p>
-                <div style="margin-top: 20px; text-align: center;">
-                   <p style="text-align: center;"><b>Son Güncelleme:</b><br>Mart 2026</p>
-                </div>
-            </aside>
-
+            <div class="nav-menu" id="nav-menu">
+                <ul class="nav-links">
+                    <li><a href="index.html" class="active">home</a></li>
+                    <li><a href="projects.html">projects</a></li>
+                    <li><a href="about.html">about</a></li>
+                    <li><a href="interests.html">interests</a></li>
+                </ul>
+                <a class="nav-cta" href="contact.html">contact →</a>
+            </div>
         </div>
+    </header>
 
-    </div>
+    <main id="main">
 
-    <!-- FLEXBOX LAB SECTION -->
-    <section class="flexbox-lab-wrapper">
-        <!-- Navbar -->
-        <nav class="flexbox-navbar">
-            <div class="flexbox-logo">LOGO</div>
-            <div class="flexbox-nav-links">
-                <a href="#home">Ana Sayfa</a>
-                <a href="#about">Hakkında</a>
-                <a href="#courses">Dersler</a>
-                <a href="#contact">İletişim</a>
-            </div>
-        </nav>
+        <!-- HERO -->
+        <section class="hero">
+            <div class="wrap hero-grid">
+                <div>
+                    <p class="hero-status">
+                        <span class="status-dot" aria-hidden="true"></span>
+                        open to internships and open-source collaboration
+                    </p>
 
-        <!-- Hero Section -->
-        <section class="flexbox-hero">
-            <div class="flexbox-hero-content">
-                <h2>Hero Başlık</h2>
-                <p>Açıklama metni</p>
-                <button class="flexbox-btn">Buton</button>
-            </div>
-            <div class="flexbox-hero-image"></div>
-        </section>
+                    <h1>Hüseyn<br>Teymurzade<span class="accent">.</span></h1>
 
-        <!-- Cards Section -->
-        <section class="flexbox-cards-section">
-            <h2>Kartlar Bölümü</h2>
-            <div class="flexbox-cards-container">
-                <div class="flexbox-card">
-                    <h3>Kart Başlığı</h3>
-                    <p>Kısa açıklama</p>
-                    <button class="flexbox-btn">Buton</button>
-                </div>
-                <div class="flexbox-card">
-                    <h3>Kart Başlığı</h3>
-                    <p>Kısa açıklama</p>
-                    <button class="flexbox-btn">Buton</button>
-                </div>
-                <div class="flexbox-card">
-                    <h3>Kart Başlığı</h3>
-                    <p>Kısa açıklama</p>
-                    <button class="flexbox-btn">Buton</button>
-                </div>
-                <div class="flexbox-card">
-                    <h3>Kart Başlığı</h3>
-                    <p>Kısa açıklama</p>
-                    <button class="flexbox-btn">Buton</button>
-                </div>
-            </div>
-        </section>
+                    <p class="hero-lead">
+                        I study computer engineering at Marmara University. Most of my time goes into
+                        <strong>systems programming</strong> and <strong>tools that live in the terminal</strong> —
+                        mostly written in Rust, Zig and Go, all of them open source.
+                    </p>
 
-        <!-- Flex Grow Section 1 -->
-        <section class="flexbox-grow-section">
-            <h2>Flex Grow Uygulaması</h2>
-            <div class="flexbox-grow-container">
-                <div class="flexbox-box flexbox-box-1">
-                    <div>
-                        <p>1 Kutu</p>
-                        <p class="flexbox-small-text">flex-grow: 1;</p>
-                        <button class="flexbox-btn">Buton</button>
+                    <div class="hero-actions">
+                        <a class="btn btn-primary" href="projects.html">
+                            View projects <span class="arrow" aria-hidden="true">→</span>
+                        </a>
+                        <a class="btn btn-ghost" href="https://github.com/Huseynteymurzade28" target="_blank" rel="noopener">
+                            GitHub <span class="arrow" aria-hidden="true">↗</span>
+                        </a>
+                    </div>
+
+                    <div class="hero-meta">
+                        <span>Istanbul, Türkiye</span>
+                        <span>Computer Engineering, 2024 →</span>
+                        <span>Open source</span>
                     </div>
                 </div>
-                <div class="flexbox-box flexbox-box-2">
-                    <div>
-                        <p>2 Kutu</p>
-                        <p class="flexbox-small-text">flex-grow: 2;</p>
-                        <button class="flexbox-btn">Buton</button>
+
+                <!-- Terminal card -->
+                <div class="terminal">
+                    <div class="terminal-bar" aria-hidden="true">
+                        <i></i><i></i><i></i>
+                        <span>~/huseyn — fish</span>
                     </div>
-                </div>
-                <div class="flexbox-box flexbox-box-3">
-                    <div>
-                        <p>3 Kutu</p>
-                        <p class="flexbox-small-text">flex-grow: 1;</p>
-                        <button class="flexbox-btn">Buton</button>
+                    <div class="terminal-body">
+                        <div class="row">
+                            <span class="prompt">❯</span> <span class="cmd">whoami</span>
+                            <span class="out">huseyn — cs @ marmara university</span>
+                        </div>
+                        <div class="row">
+                            <span class="prompt">❯</span> <span class="cmd">ls ~/projects | head -4</span>
+                            <span class="out"><b>flerp/</b>&nbsp; <b>yoinky/</b>&nbsp; <b>kizamu/</b>&nbsp; <b>cosmocli/</b></span>
+                        </div>
+                        <div class="row">
+                            <span class="prompt">❯</span> <span class="cmd">cat ~/.config/stack</span>
+                            <span class="out"><i>rust</i> · <i>zig</i> · <i>go</i> · <i>odin</i> · <i>c</i> · <i>python</i> · <i>nix</i></span>
+                        </div>
+                        <div class="row">
+                            <span class="prompt">❯</span> <span class="cmd">uptime --learning</span>
+                            <span class="out">compilers, operating systems, distributed systems</span>
+                        </div>
+                        <div class="row">
+                            <span class="prompt">❯</span> <span class="caret" aria-hidden="true"></span>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Flex Grow Section 2 -->
-        <section class="flexbox-grow-section">
-            <h2>Flex Grow Uygulaması</h2>
-            <div class="flexbox-grow-container">
-                <div class="flexbox-box flexbox-box-1">
-                    <div>
-                        <p>1 Kutu</p>
-                        <p class="flexbox-small-text">flex-grow: 1;</p>
-                    </div>
+        <hr class="rule">
+
+        <!-- SELECTED WORK -->
+        <section class="section" id="work">
+            <div class="wrap">
+                <div class="section-head reveal">
+                    <p class="eyebrow">01 — selected work</p>
+                    <h2>Things that run in a terminal</h2>
+                    <p>
+                        Most of these started as something I needed myself and grew from there.
+                        All of them are on GitHub, source included.
+                    </p>
                 </div>
-                <div class="flexbox-box flexbox-box-2">
-                    <div>
-                        <p>2 Kutu</p>
-                        <p class="flexbox-small-text">flex-grow: 2;</p>
-                    </div>
+
+                <div class="card-grid">
+
+                    <article class="project project-featured reveal">
+                        <span class="tag">featured</span>
+                        <div class="project-top">
+                            <h3><a href="https://github.com/Huseynteymurzade28/flerp" target="_blank" rel="noopener">flerp</a></h3>
+                            <span class="stars">23</span>
+                        </div>
+                        <p>
+                            A ratatui workspace for exploring and analysing files without leaving the
+                            command line. Live search, keyword extraction, repeated-line detection —
+                            and it reads PDFs page by page, text and embedded images included.
+                        </p>
+                        <div class="project-foot">
+                            <span class="lang lang-rust">Rust</span>
+                            <a class="project-link" href="https://github.com/Huseynteymurzade28/flerp" target="_blank" rel="noopener">
+                                open repo <span class="arrow" aria-hidden="true">↗</span>
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="project reveal">
+                        <div class="project-top">
+                            <h3><a href="https://github.com/Huseynteymurzade28/Yoinky" target="_blank" rel="noopener">Yoinky</a></h3>
+                            <span class="stars">8</span>
+                        </div>
+                        <p>
+                            A Linux system monitor. Live CPU, memory and network sparklines, a per-core
+                            histogram and <code>Overview · Processes · Devices · I/O</code> tabs — a real
+                            dashboard rather than a static snapshot.
+                        </p>
+                        <div class="project-foot">
+                            <span class="lang lang-rust">Rust</span>
+                            <a class="project-link" href="https://github.com/Huseynteymurzade28/Yoinky" target="_blank" rel="noopener">
+                                open repo <span class="arrow" aria-hidden="true">↗</span>
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="project reveal">
+                        <div class="project-top">
+                            <h3><a href="https://github.com/Huseynteymurzade28/memflex" target="_blank" rel="noopener">memflex</a></h3>
+                            <span class="stars">6</span>
+                        </div>
+                        <p>
+                            My own dynamic memory manager built on <code>sbrk</code>. First-fit, best-fit
+                            and worst-fit strategies, fragmentation handling, and a benchmark suite that
+                            puts them side by side.
+                        </p>
+                        <div class="project-foot">
+                            <span class="lang lang-c">C</span>
+                            <a class="project-link" href="https://github.com/Huseynteymurzade28/memflex" target="_blank" rel="noopener">
+                                open repo <span class="arrow" aria-hidden="true">↗</span>
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="project reveal">
+                        <div class="project-top">
+                            <h3><a href="https://github.com/Huseynteymurzade28/Kizamu" target="_blank" rel="noopener">Kizamu</a></h3>
+                            <span class="stars">4</span>
+                        </div>
+                        <p>
+                            A terminal typing trainer written in Zig. The name comes from 刻む — to carve.
+                            Measures WPM and accuracy behind a clean interface, aiming for zero dependencies.
+                        </p>
+                        <div class="project-foot">
+                            <span class="lang lang-zig">Zig</span>
+                            <a class="project-link" href="https://github.com/Huseynteymurzade28/Kizamu" target="_blank" rel="noopener">
+                                open repo <span class="arrow" aria-hidden="true">↗</span>
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="project reveal">
+                        <div class="project-top">
+                            <h3><a href="https://github.com/Huseynteymurzade28/cbbox" target="_blank" rel="noopener">cbbox</a></h3>
+                            <span class="stars">5</span>
+                        </div>
+                        <p>
+                            A CHIP-8 interpreter rendering through SDL2. I wrote it to build the
+                            fundamentals of emulation end to end — opcode decoding, timers, memory map.
+                        </p>
+                        <div class="project-foot">
+                            <span class="lang lang-rust">Rust</span>
+                            <a class="project-link" href="https://github.com/Huseynteymurzade28/cbbox" target="_blank" rel="noopener">
+                                open repo <span class="arrow" aria-hidden="true">↗</span>
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="project reveal">
+                        <div class="project-top">
+                            <h3><a href="https://github.com/Huseynteymurzade28/klavrasa" target="_blank" rel="noopener">klavrasa</a></h3>
+                            <span class="stars">3</span>
+                        </div>
+                        <p>
+                            A piano-roll visualiser that renders MIDI files as falling notes. The MIDI
+                            parser is written from scratch and audio is synthesised in real time from sine waves.
+                        </p>
+                        <div class="project-foot">
+                            <span class="lang lang-odin">Odin</span>
+                            <a class="project-link" href="https://github.com/Huseynteymurzade28/klavrasa" target="_blank" rel="noopener">
+                                open repo <span class="arrow" aria-hidden="true">↗</span>
+                            </a>
+                        </div>
+                    </article>
+
                 </div>
-                <div class="flexbox-box flexbox-box-3">
-                    <div>
-                        <p>3 Kutu</p>
-                        <p class="flexbox-small-text">flex-grow: 1;</p>
+
+                <p style="margin-top: 28px;" class="reveal">
+                    <a class="btn btn-ghost" href="projects.html">
+                        All projects <span class="arrow" aria-hidden="true">→</span>
+                    </a>
+                </p>
+            </div>
+        </section>
+
+        <!-- STACK -->
+        <section class="section" id="stack">
+            <div class="wrap">
+                <div class="section-head reveal">
+                    <p class="eyebrow">02 — stack</p>
+                    <h2>What I use day to day</h2>
+                </div>
+
+                <div class="stack-groups">
+                    <div class="stack-group reveal">
+                        <h3>Languages</h3>
+                        <ul class="pills">
+                            <li>Rust</li><li>Zig</li><li>Go</li><li>C</li><li>C++</li>
+                            <li>Odin</li><li>Python</li><li>TypeScript</li><li>Lua</li><li>C#</li>
+                        </ul>
+                    </div>
+
+                    <div class="stack-group reveal">
+                        <h3>Tools</h3>
+                        <ul class="pills">
+                            <li>Linux / NixOS</li><li>Nix</li><li>Git</li><li>Docker</li>
+                            <li>Neovim</li><li>Fish</li><li>Cargo</li><li>Make</li>
+                        </ul>
+                    </div>
+
+                    <div class="stack-group reveal">
+                        <h3>Areas</h3>
+                        <ul class="pills">
+                            <li>Systems programming</li><li>TUI / CLI</li><li>Emulation</li>
+                            <li>Compilers</li><li>Graphics</li><li>Data structures</li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Footer -->
-        <footer class="flexbox-footer">
-            <p>© 2026 - Temel Flexbox Örneği</p>
-        </footer>
-    </section>
+        <!-- NOW -->
+        <section class="section" id="now">
+            <div class="wrap">
+                <div class="section-head reveal">
+                    <p class="eyebrow">03 — now</p>
+                    <h2>What I'm working on</h2>
+                </div>
+
+                <div class="two-col">
+                    <div class="panel reveal">
+                        <h3>Learning</h3>
+                        <ul class="list-clean">
+                            <li>Compiler design — from lexer to code generation</li>
+                            <li>Operating system kernel concepts</li>
+                            <li>Distributed systems and concurrency models</li>
+                            <li>The functional programming paradigm</li>
+                        </ul>
+                    </div>
+
+                    <div class="panel reveal">
+                        <h3>Aiming for</h3>
+                        <ul class="list-clean">
+                            <li>A meaningful contribution to a large open-source project</li>
+                            <li>An internship in systems programming</li>
+                            <li>Packaging and distributing the tools I write</li>
+                            <li>Writing down what I learn</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT CTA -->
+        <section class="section">
+            <div class="wrap">
+                <div class="panel reveal" style="text-align: center;">
+                    <p class="eyebrow" style="justify-content: center;">04 — say hello</p>
+                    <h2 style="margin-bottom: 12px;">Got something in mind?</h2>
+                    <p style="color: var(--text-3); max-width: 52ch; margin: 0 auto 24px;">
+                        A project, a collaboration, an internship, or just a question — all welcome.
+                        Email is the fastest way to reach me.
+                    </p>
+                    <div style="display: flex; flex-wrap: wrap; gap: 12px; justify-content: center;">
+                        <a class="btn btn-primary" href="mailto:huseynteymurrr74@gmail.com">
+                            Send an email <span class="arrow" aria-hidden="true">→</span>
+                        </a>
+                        <a class="btn btn-ghost" href="contact.html">Other channels</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
 
     <!-- FOOTER -->
-    <footer>
-        <p>&copy; 2026 Hüseyn Teymurzade &mdash;
-            <a href="https://github.com/flearlyly" target="_blank">GitHub</a>
-        </p>
+    <footer class="footer">
+        <div class="wrap footer-inner">
+            <small>© 2026 Hüseyn Teymurzade — handwritten HTML &amp; CSS</small>
+            <ul class="footer-links">
+                <li><a href="https://github.com/Huseynteymurzade28" target="_blank" rel="noopener">GitHub</a></li>
+                <li><a href="https://www.linkedin.com/in/huseyn-teymurzade/" target="_blank" rel="noopener">LinkedIn</a></li>
+                <li><a href="https://leetcode.com/u/Flearlyly/" target="_blank" rel="noopener">LeetCode</a></li>
+                <li><a href="mailto:huseynteymurrr74@gmail.com">Email</a></li>
+            </ul>
+        </div>
     </footer>
 
+    <script src="main.js" defer></script>
 </body>
 </html>

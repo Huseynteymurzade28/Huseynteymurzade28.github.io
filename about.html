@@ -1,118 +1,197 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hüseyn Teymurzade - Hakkımda</title>
+    <title>About — Hüseyn Teymurzade</title>
+    <meta name="description" content="Who Hüseyn Teymurzade is: education, interests, timeline and goals.">
+    <meta name="theme-color" content="#16141f">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- NAVİGASYON -->
-    <nav>
-        <ul>
-            <li><a href="index.html">HT</a></li>
-            <li><a href="index.html">Ana Sayfa</a></li>
-            <li><a href="about.html" class="active">Hakkımda</a></li>
-            <li><a href="interests.html">İlgi Alanlarım</a></li>
-            <li><a href="hesaplama.html">Hesaplama</a></li>
-            <li><a href="contact.html">İletişim</a></li>
-        </ul>
-    </nav>
+    <a class="skip-link" href="#main">Skip to content</a>
 
-    <div class="container">
+    <!-- NAVIGATION -->
+    <header class="nav">
+        <div class="wrap nav-inner">
+            <a class="brand" href="index.html">
+                <span class="brand-mark" aria-hidden="true">HT</span>
+                <span class="brand-name">huseyn</span>
+            </a>
 
-        <h1>🎓 Hakkımda</h1>
-        <p class="subtitle">Kim olduğum, nereden geldiğim ve nereye gittiğim.</p>
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
 
-        <!-- BİYOGRAFİ -->
-        <section class="bio">
-            <p>
-                Merhaba! Ben <strong>Hüseyn Teymurzade</strong>.
-                <strong>Marmara Üniversitesi Bilgisayar Mühendisliği</strong> bölümünde öğrenciyim.
-                Yazılım dünyasına olan ilgim küçük yaşlarda başladı; bilgisayarların nasıl çalıştığını
-                anlamaya çalışırken kendimi <em>kod yazmayı öğrenirken</em> buldum. O günden beri
-                teknolojinin her dalına merak ve heyecanla yaklaşıyorum.
-            </p>
-            <p>
-                Şu anda <strong>C, C++, Rust, Python, Go, JavaScript</strong> ve <strong>TypeScript</strong>
-                gibi birçok programlama dilinde projeler geliştiriyorum. <em>Sistem programlama</em>,
-                <em>algoritma tasarımı</em> ve <em>açık kaynak katkıları</em> en çok vakit ayırdığım
-                konuların başında geliyor. Linux tabanlı sistemler, Docker ve NixOS gibi araçlarla da
-                günlük olarak çalışıyorum.
-            </p>
-            <p>
-                Hedefim yalnızca iyi bir mühendis olmak değil, aynı zamanda <strong>topluma fayda sağlayan
-                yazılımlar</strong> üretmek ve açık kaynak ekosistemine sürekli katkıda bulunmak.
-                Her yeni projeyi bir <em>öğrenme fırsatı</em> olarak görüyorum ve sürekli
-                kendimi geliştirmeyi ilke ediniyorum.
-            </p>
-        </section>
+            <div class="nav-menu" id="nav-menu">
+                <ul class="nav-links">
+                    <li><a href="index.html">home</a></li>
+                    <li><a href="projects.html">projects</a></li>
+                    <li><a href="about.html" class="active">about</a></li>
+                    <li><a href="interests.html">interests</a></li>
+                </ul>
+                <a class="nav-cta" href="contact.html">contact →</a>
+            </div>
+        </div>
+    </header>
 
-        <!-- ALINTI -->
-        <blockquote>
-            "Bilgisayar bilimi, tıpkı astronomi gibi, teleskoplarla değil bilgisayarlarla değil;
-            <strong>düşünceyle</strong> ilgilidir."
-            <footer>&mdash; Edsger W. Dijkstra</footer>
-        </blockquote>
+    <main id="main">
 
-        <!-- ZAMAN ÇİZELGESİ -->
-        <section class="timeline-section">
-            <h2>📅 Zaman Çizelgesi</h2>
-
-            <div class="timeline">
-
-                <div class="timeline-item">
-                    <h3>Marmara Üniversitesi &mdash; Bilgisayar Mühendisliği</h3>
-                    <div class="date">2024 &ndash; Devam ediyor</div>
-                    <ul>
-                        <li>Bilgisayar mühendisliği lisans eğitimi</li>
-                        <li>Algoritma ve veri yapıları, sistem programlama dersleri</li>
-                        <li>Açık kaynak topluluklarına aktif katılım</li>
-                    </ul>
-                </div>
-
-                <div class="timeline-item">
-                    <h3>Programlamaya İlk Adım</h3>
-                    <div class="date">2020 civarı</div>
-                    <ul>
-                        <li>İlk programlama dili olarak C ve Python öğrenimi</li>
-                        <li>Küçük otomasyon scriptleri ve konsol uygulamaları</li>
-                        <li>LeetCode ve Codewars ile problem çözme pratiği</li>
-                    </ul>
-                </div>
-
-                <div class="timeline-item">
-                    <h3>🎯 Kısa Vadeli Hedefler</h3>
-                    <div class="date">2026</div>
-                    <ul>
-                        <li>Sistem programlama ve düşük seviye optimizasyon becerilerini ilerletme</li>
-                        <li>Açık kaynak bir projeye anlamlı katkıda bulunma</li>
-                        <li>Staj veya iş birliği fırsatları yakalama</li>
-                    </ul>
-                </div>
-
-                <div class="timeline-item">
-                    <h3>🚀 Uzun Vadeli Hedefler</h3>
-                    <div class="date">Gelecek</div>
-                    <ul>
-                        <li>Yazılım mimarisi ve sistem tasarımı alanında uzmanlaşma</li>
-                        <li>Topluma fayda sağlayan özgün yazılım projeleri geliştirme</li>
-                        <li>Teknik topluluk oluşturma ve bilgi paylaşımı</li>
-                    </ul>
-                </div>
-
+        <!-- PAGE HEAD -->
+        <section class="page-head">
+            <div class="wrap wrap-narrow">
+                <p class="eyebrow">about</p>
+                <h1>A short version</h1>
             </div>
         </section>
 
-    </div>
+        <!-- BIO -->
+        <section class="section">
+            <div class="wrap wrap-narrow">
+                <div class="prose reveal">
+                    <p class="lead">
+                        I'm Hüseyn Teymurzade. I study computer engineering at Marmara University and
+                        spend most of my time trying to understand what actually happens in the lower
+                        layers of a computer.
+                    </p>
+
+                    <p>
+                        My interest in software started with wondering how computers work. That
+                        curiosity led me first to C and Python, and then to the part I genuinely
+                        enjoy: managing memory by hand, building an emulator's instruction loop,
+                        watching an interpreter parse its own language.
+                    </p>
+
+                    <p>
+                        These days I mostly write <strong>Rust</strong>, <strong>Zig</strong>,
+                        <strong>Go</strong>, <strong>C</strong> and <strong>Odin</strong>. Most of what
+                        I build lives in the terminal — system monitors, file analysis tools, games,
+                        interpreters. My daily environment is Linux, usually NixOS; I like keeping
+                        everything reproducible.
+                    </p>
+
+                    <p>
+                        My goal isn't only to become a good engineer, but to leave behind software
+                        that is useful, open, and readable enough for someone else to learn from.
+                        I treat every new project as an excuse to learn something — and it usually
+                        works out that way.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- QUOTE -->
+        <section class="section">
+            <div class="wrap wrap-narrow">
+                <blockquote class="reveal">
+                    Computer science is no more about computers than astronomy is about telescopes.
+                    <footer>— Edsger W. Dijkstra</footer>
+                </blockquote>
+            </div>
+        </section>
+
+        <!-- TIMELINE -->
+        <section class="section">
+            <div class="wrap wrap-narrow">
+                <div class="section-head reveal">
+                    <p class="eyebrow">timeline</p>
+                    <h2>How I got here</h2>
+                </div>
+
+                <div class="timeline">
+
+                    <div class="tl-item is-now reveal">
+                        <p class="tl-date">2024 → present</p>
+                        <h3>Marmara University — Computer Engineering</h3>
+                        <ul class="list-clean">
+                            <li>Focused on algorithms, data structures and systems programming</li>
+                            <li>Built a habit of writing and publishing my own tools outside coursework</li>
+                            <li>Following and contributing to open-source communities</li>
+                        </ul>
+                    </div>
+
+                    <div class="tl-item reveal">
+                        <p class="tl-date">2026</p>
+                        <h3>What I'm focused on now</h3>
+                        <ul class="list-clean">
+                            <li>Compiler design — started with <a href="https://github.com/Huseynteymurzade28/liszig" target="_blank" rel="noopener">liszig</a>, more to come</li>
+                            <li>Emulation and low-level optimisation</li>
+                            <li>Packaging my tools so they're actually distributable</li>
+                            <li>Looking for an internship on the systems side</li>
+                        </ul>
+                    </div>
+
+                    <div class="tl-item reveal">
+                        <p class="tl-date">2022 → 2024</p>
+                        <h3>Moving into the terminal</h3>
+                        <ul class="list-clean">
+                            <li>Switched to Linux, then to NixOS and declarative configuration</li>
+                            <li>Set up Neovim, fish and my own dotfiles</li>
+                            <li>First TUI experiments: small tools that actually got used</li>
+                        </ul>
+                    </div>
+
+                    <div class="tl-item reveal">
+                        <p class="tl-date">around 2020</p>
+                        <h3>First lines</h3>
+                        <ul class="list-clean">
+                            <li>Started with C and Python</li>
+                            <li>Small automation scripts and console applications</li>
+                            <li>Picked up problem solving on LeetCode and Codewars</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- GOALS -->
+        <section class="section">
+            <div class="wrap wrap-narrow">
+                <div class="two-col">
+                    <div class="panel reveal">
+                        <h3>Short term</h3>
+                        <ul class="list-clean">
+                            <li>A meaningful contribution to a large open-source project</li>
+                            <li>An internship in systems programming</li>
+                            <li>Getting the compiler project into working shape</li>
+                        </ul>
+                    </div>
+                    <div class="panel reveal">
+                        <h3>Long term</h3>
+                        <ul class="list-clean">
+                            <li>Going deeper into system design and software architecture</li>
+                            <li>Turning my tools into projects I can maintain properly</li>
+                            <li>Writing up and sharing what I learn</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <p style="margin-top: 28px;" class="reveal">
+                    <a class="btn btn-ghost" href="projects.html">
+                        See what I've built <span class="arrow" aria-hidden="true">→</span>
+                    </a>
+                </p>
+            </div>
+        </section>
+
+    </main>
 
     <!-- FOOTER -->
-    <footer class="site-footer">
-        <p>&copy; 2026 Hüseyn Teymurzade &mdash;
-            <a href="https://github.com/flearlyly" target="_blank">GitHub</a>
-        </p>
+    <footer class="footer">
+        <div class="wrap footer-inner">
+            <small>© 2026 Hüseyn Teymurzade — handwritten HTML &amp; CSS</small>
+            <ul class="footer-links">
+                <li><a href="https://github.com/Huseynteymurzade28" target="_blank" rel="noopener">GitHub</a></li>
+                <li><a href="https://www.linkedin.com/in/huseyn-teymurzade/" target="_blank" rel="noopener">LinkedIn</a></li>
+                <li><a href="https://leetcode.com/u/Flearlyly/" target="_blank" rel="noopener">LeetCode</a></li>
+                <li><a href="mailto:huseynteymurrr74@gmail.com">Email</a></li>
+            </ul>
+        </div>
     </footer>
 
+    <script src="main.js" defer></script>
 </body>
 </html>

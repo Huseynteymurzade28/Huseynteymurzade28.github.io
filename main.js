@@ -70,6 +70,25 @@
         });
     }
 
+    /* --- Live star counts; the numbers in the HTML are the fallback --- */
+    var starEls = document.querySelectorAll(".project .stars");
+
+    if (starEls.length && window.fetch) {
+        fetch("https://api.github.com/users/Huseynteymurzade28/repos?per_page=100")
+            .then(function (r) { return r.ok ? r.json() : []; })
+            .then(function (repos) {
+                var counts = {};
+                repos.forEach(function (r) { counts[r.name.toLowerCase()] = r.stargazers_count; });
+
+                starEls.forEach(function (el) {
+                    var link = el.parentNode.querySelector("h3 a");
+                    var name = link && link.getAttribute("href").split("/").pop().toLowerCase();
+                    if (name in counts) el.textContent = counts[name];
+                });
+            })
+            .catch(function () {});
+    }
+
     /* --- Gentle entrance once visible --- */
     var targets = document.querySelectorAll(".reveal");
 

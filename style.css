@@ -248,6 +248,12 @@ code, kbd {
 .brand-name { color: var(--text-2); }
 .brand:hover .brand-name { color: var(--text); }
 
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
 .nav-links {
     display: flex;
     align-items: center;
@@ -636,6 +642,7 @@ code, kbd {
 .lang-odin   { --dot: #86b0d6; }
 .lang-lua    { --dot: #8f9fd6; }
 .lang-svelte { --dot: #d68a6a; }
+.lang-crystal { --dot: #b8b2cc; }
 .lang-nix    { --dot: #7fa8d1; }
 .lang-js     { --dot: #ccc078; }
 

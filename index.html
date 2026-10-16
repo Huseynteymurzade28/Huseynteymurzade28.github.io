@@ -89,11 +89,15 @@
                         </div>
                         <div class="row">
                             <span class="prompt">❯</span> <span class="cmd">ls ~/projects | head -4</span>
-                            <span class="out"><b>flerp/</b>&nbsp; <b>yoinky/</b>&nbsp; <b>kizamu/</b>&nbsp; <b>cosmocli/</b></span>
+                            <span class="out"><b>pokeductor/</b>&nbsp; <b>tuiba/</b>&nbsp; <b>flerp/</b>&nbsp; <b>pomtex/</b></span>
                         </div>
                         <div class="row">
                             <span class="prompt">❯</span> <span class="cmd">cat ~/.config/stack</span>
-                            <span class="out"><i>rust</i> · <i>zig</i> · <i>go</i> · <i>odin</i> · <i>c</i> · <i>python</i> · <i>nix</i></span>
+                            <span class="out"><i>rust</i> · <i>zig</i> · <i>go</i> · <i>odin</i> · <i>crystal</i> · <i>c</i> · <i>nix</i></span>
+                        </div>
+                        <div class="row">
+                            <span class="prompt">❯</span> <span class="cmd">brew tap huseynteymurzade28/tap</span>
+                            <span class="out">==&gt; tapped 5 formulae: pokeductor, tuiba, flerp, kizamu, pomtex</span>
                         </div>
                         <div class="row">
                             <span class="prompt">❯</span> <span class="cmd">uptime --learning</span>
@@ -126,8 +130,44 @@
                     <article class="project project-featured reveal">
                         <span class="tag">featured</span>
                         <div class="project-top">
+                            <h3><a href="https://github.com/Huseynteymurzade28/pokeductor" target="_blank" rel="noopener">pokeductor</a></h3>
+                            <span class="stars">128</span>
+                        </div>
+                        <p>
+                            A terminal Pokédex and evolution analyser. Fetches PokeAPI data asynchronously,
+                            untangles branching evolution trees and draws pixel-art sprites in the terminal.
+                            Ships as a prebuilt binary with completions and a man page: <code>brew install pokeductor</code>.
+                        </p>
+                        <div class="project-foot">
+                            <span class="lang lang-rust">Rust</span>
+                            <a class="project-link" href="https://github.com/Huseynteymurzade28/pokeductor" target="_blank" rel="noopener">
+                                open repo <span class="arrow" aria-hidden="true">↗</span>
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="project reveal">
+                        <div class="project-top">
+                            <h3><a href="https://github.com/Huseynteymurzade28/tuiba" target="_blank" rel="noopener">tuiba</a></h3>
+                            <span class="stars">12</span>
+                        </div>
+                        <p>
+                            A Game Boy Advance emulator that runs in the terminal. Full ARM7TDMI, all six
+                            video modes, sound, saves and the cartridge clock — drawn as real pixels over
+                            Kitty or Sixel, or as half-blocks everywhere else.
+                        </p>
+                        <div class="project-foot">
+                            <span class="lang lang-rust">Rust</span>
+                            <a class="project-link" href="https://github.com/Huseynteymurzade28/tuiba" target="_blank" rel="noopener">
+                                open repo <span class="arrow" aria-hidden="true">↗</span>
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="project reveal">
+                        <div class="project-top">
                             <h3><a href="https://github.com/Huseynteymurzade28/flerp" target="_blank" rel="noopener">flerp</a></h3>
-                            <span class="stars">23</span>
+                            <span class="stars">31</span>
                         </div>
                         <p>
                             A ratatui workspace for exploring and analysing files without leaving the
@@ -144,17 +184,17 @@
 
                     <article class="project reveal">
                         <div class="project-top">
-                            <h3><a href="https://github.com/Huseynteymurzade28/Yoinky" target="_blank" rel="noopener">Yoinky</a></h3>
-                            <span class="stars">8</span>
+                            <h3><a href="https://github.com/Huseynteymurzade28/pomtex" target="_blank" rel="noopener">pomtex</a></h3>
+                            <span class="stars">3</span>
                         </div>
                         <p>
-                            A Linux system monitor. Live CPU, memory and network sparklines, a per-core
-                            histogram and <code>Overview · Processes · Devices · I/O</code> tabs — a real
-                            dashboard rather than a static snapshot.
+                            LaTeX without the 5 GB distribution. Starts from a small portable TeX kernel
+                            and fetches individual CTAN packages only when a document needs them,
+                            each one checked against its SHA-512 sum.
                         </p>
                         <div class="project-foot">
-                            <span class="lang lang-rust">Rust</span>
-                            <a class="project-link" href="https://github.com/Huseynteymurzade28/Yoinky" target="_blank" rel="noopener">
+                            <span class="lang lang-crystal">Crystal</span>
+                            <a class="project-link" href="https://github.com/Huseynteymurzade28/pomtex" target="_blank" rel="noopener">
                                 open repo <span class="arrow" aria-hidden="true">↗</span>
                             </a>
                         </div>
@@ -162,51 +202,17 @@
 
                     <article class="project reveal">
                         <div class="project-top">
-                            <h3><a href="https://github.com/Huseynteymurzade28/memflex" target="_blank" rel="noopener">memflex</a></h3>
-                            <span class="stars">6</span>
+                            <h3><a href="https://github.com/Huseynteymurzade28/euspinolia" target="_blank" rel="noopener">euspinolia</a></h3>
+                            <span class="stars">3</span>
                         </div>
                         <p>
-                            My own dynamic memory manager built on <code>sbrk</code>. First-fit, best-fit
-                            and worst-fit strategies, fragmentation handling, and a benchmark suite that
-                            puts them side by side.
-                        </p>
-                        <div class="project-foot">
-                            <span class="lang lang-c">C</span>
-                            <a class="project-link" href="https://github.com/Huseynteymurzade28/memflex" target="_blank" rel="noopener">
-                                open repo <span class="arrow" aria-hidden="true">↗</span>
-                            </a>
-                        </div>
-                    </article>
-
-                    <article class="project reveal">
-                        <div class="project-top">
-                            <h3><a href="https://github.com/Huseynteymurzade28/Kizamu" target="_blank" rel="noopener">Kizamu</a></h3>
-                            <span class="stars">4</span>
-                        </div>
-                        <p>
-                            A terminal typing trainer written in Zig. The name comes from 刻む — to carve.
-                            Measures WPM and accuracy behind a clean interface, aiming for zero dependencies.
+                            A small CSV and table library: the engine is Zig, the API is Python via
+                            <code>ctypes</code>. Typed columns, filter, sort and group-by — faster than
+                            pandas for most of that, and the shared library links nothing, not even libc.
                         </p>
                         <div class="project-foot">
                             <span class="lang lang-zig">Zig</span>
-                            <a class="project-link" href="https://github.com/Huseynteymurzade28/Kizamu" target="_blank" rel="noopener">
-                                open repo <span class="arrow" aria-hidden="true">↗</span>
-                            </a>
-                        </div>
-                    </article>
-
-                    <article class="project reveal">
-                        <div class="project-top">
-                            <h3><a href="https://github.com/Huseynteymurzade28/cbbox" target="_blank" rel="noopener">cbbox</a></h3>
-                            <span class="stars">5</span>
-                        </div>
-                        <p>
-                            A CHIP-8 interpreter rendering through SDL2. I wrote it to build the
-                            fundamentals of emulation end to end — opcode decoding, timers, memory map.
-                        </p>
-                        <div class="project-foot">
-                            <span class="lang lang-rust">Rust</span>
-                            <a class="project-link" href="https://github.com/Huseynteymurzade28/cbbox" target="_blank" rel="noopener">
+                            <a class="project-link" href="https://github.com/Huseynteymurzade28/euspinolia" target="_blank" rel="noopener">
                                 open repo <span class="arrow" aria-hidden="true">↗</span>
                             </a>
                         </div>
@@ -252,7 +258,7 @@
                         <h3>Languages</h3>
                         <ul class="pills">
                             <li>Rust</li><li>Zig</li><li>Go</li><li>C</li><li>C++</li>
-                            <li>Odin</li><li>Python</li><li>TypeScript</li><li>Lua</li><li>C#</li>
+                            <li>Odin</li><li>Crystal</li><li>Python</li><li>TypeScript</li><li>Lua</li>
                         </ul>
                     </div>
 
@@ -260,7 +266,8 @@
                         <h3>Tools</h3>
                         <ul class="pills">
                             <li>Linux / NixOS</li><li>Nix</li><li>Git</li><li>Docker</li>
-                            <li>Neovim</li><li>Fish</li><li>Cargo</li><li>Make</li>
+                            <li>Neovim</li><li>Fish</li><li>Cargo</li><li>GitHub Actions</li>
+                            <li>Homebrew taps</li><li>Scoop</li>
                         </ul>
                     </div>
 
@@ -268,7 +275,8 @@
                         <h3>Areas</h3>
                         <ul class="pills">
                             <li>Systems programming</li><li>TUI / CLI</li><li>Emulation</li>
-                            <li>Compilers</li><li>Graphics</li><li>Data structures</li>
+                            <li>Compilers</li><li>Graphics</li><li>CRDTs</li>
+                            <li>Release engineering</li>
                         </ul>
                     </div>
                 </div>
@@ -287,10 +295,10 @@
                     <div class="panel reveal">
                         <h3>Learning</h3>
                         <ul class="list-clean">
+                            <li>Emulator accuracy — cycle timing, PPU and DMA interleaving</li>
                             <li>Compiler design — from lexer to code generation</li>
+                            <li>Distributed systems: CRDTs and real-time sync</li>
                             <li>Operating system kernel concepts</li>
-                            <li>Distributed systems and concurrency models</li>
-                            <li>The functional programming paradigm</li>
                         </ul>
                     </div>
 
@@ -299,7 +307,7 @@
                         <ul class="list-clean">
                             <li>A meaningful contribution to a large open-source project</li>
                             <li>An internship in systems programming</li>
-                            <li>Packaging and distributing the tools I write</li>
+                            <li>Keeping every tool installable in one command — Homebrew, Scoop, and more</li>
                             <li>Writing down what I learn</li>
                         </ul>
                     </div>
